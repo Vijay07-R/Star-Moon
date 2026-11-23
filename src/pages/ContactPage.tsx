@@ -1,6 +1,7 @@
-import { Calendar, Mail, MapPin, Phone } from 'lucide-react'
+import { Calendar, MapPin, Phone } from 'lucide-react'
 import { useSearchParams } from 'react-router-dom'
 import AppointmentForm from '../components/forms/AppointmentForm'
+import { InstagramIcon } from '../components/ui/SocialIcons'
 import { siteInfo } from '../data/site'
 
 const contactCards = [
@@ -9,7 +10,7 @@ const contactCards = [
     title: 'Visit Our Salon', 
     info: siteInfo.address,
     action: 'Get Directions',
-    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteInfo.mapQuery)}` 
+    href: siteInfo.mapsUrl,
   },
   { 
     icon: Phone, 
@@ -18,12 +19,12 @@ const contactCards = [
     action: 'Call Now',
     href: siteInfo.phoneHref 
   },
-  { 
-    icon: Mail, 
-    title: 'Email Us', 
-    info: siteInfo.email,
-    action: 'Send Email',
-    href: `mailto:${siteInfo.email}` 
+  {
+    icon: ({ className }: { className?: string }) => <InstagramIcon className={`${className ?? ''} fill-current`} />,
+    title: 'Follow Us',
+    info: siteInfo.social.instagramHandle,
+    action: 'Open Instagram',
+    href: siteInfo.social.instagram,
   },
 ]
 
@@ -94,7 +95,7 @@ export default function ContactPage() {
             </div>
             <div className="mt-6 text-center">
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteInfo.mapQuery)}`}
+                href={siteInfo.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-burgundy hover:text-beige transition-colors font-semibold"

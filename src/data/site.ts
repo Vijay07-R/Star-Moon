@@ -3,20 +3,21 @@ import type { NavItem } from '../types'
 export const siteInfo = {
   name: 'Star Moon',
   tagline: 'Beauty Salon',
-  address: 'No. 24, 2nd Avenue, Anna Nagar, Chennai, Tamil Nadu 600040',
-  mapQuery: 'Anna Nagar 2nd Avenue, Chennai',
-  phone: '+91 98765 43210',
-  phoneHref: 'tel:+919876543210',
-  whatsapp: '919876543210',
-  email: 'hello@starmoonsalon.com',
+  address: '28/9, Muthalamman Koil St Extension, Nallan Kuppam, West Mambalam, Chennai, Tamil Nadu 600033',
+  mapQuery: 'Star Moon Beauty Salon, 28/9 Muthalamman Koil St Extension, West Mambalam, Chennai 600033',
+  /** Google Maps link to the salon's business listing */
+  mapsUrl: 'https://maps.app.goo.gl/1speMfDFCmgXzeXq8',
+  phone: '+91 99405 66432',
+  phoneHref: 'tel:+919940566432',
+  whatsapp: '919940566432',
   hours: [
     { days: 'Monday – Friday', time: '10:00 AM – 8:00 PM' },
     { days: 'Saturday', time: '9:00 AM – 9:00 PM' },
     { days: 'Sunday', time: '10:00 AM – 6:00 PM' },
   ],
   social: {
-    instagram: 'https://www.instagram.com/',
-    facebook: 'https://www.facebook.com/',
+    instagram: 'https://www.instagram.com/star_moon_studio/',
+    instagramHandle: '@star_moon_studio',
   },
 }
 

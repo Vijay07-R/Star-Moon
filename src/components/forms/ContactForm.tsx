@@ -46,7 +46,7 @@ export default function ContactForm() {
         <input type="text" autoComplete="name" placeholder="Your full name" value={values.name} onChange={handleChange} {...inputProps(P, 'name', errors.name)} />
       </FormField>
       <FormField id={`${P}-phone`} label="Phone Number" required error={errors.phone}>
-        <input type="tel" autoComplete="tel" placeholder="98765 43210" value={values.phone} onChange={handleChange} {...inputProps(P, 'phone', errors.phone)} />
+        <input type="tel" autoComplete="tel" placeholder="Your 10-digit mobile number" value={values.phone} onChange={handleChange} {...inputProps(P, 'phone', errors.phone)} />
       </FormField>
       <FormField id={`${P}-email`} label="Email" required error={errors.email} className="sm:col-span-2">
         <input type="email" autoComplete="email" placeholder="you@example.com" value={values.email} onChange={handleChange} {...inputProps(P, 'email', errors.email)} />

@@ -1,9 +1,9 @@
-import { Clock, Mail, MapPin, Phone } from 'lucide-react'
+import { Clock, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { services } from '../../data/services'
 import { navItems, siteInfo } from '../../data/site'
 import Logo from '../ui/Logo'
-import SocialIcons from '../ui/SocialIcons'
+import SocialIcons, { InstagramIcon } from '../ui/SocialIcons'
 
 const year = new Date().getFullYear()
 
@@ -62,9 +62,9 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex gap-3">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-beige" aria-hidden />
-              <a href={`mailto:${siteInfo.email}`} className="break-all hover:text-beige">
-                {siteInfo.email}
+              <InstagramIcon className="mt-0.5 h-4 w-4 shrink-0 fill-current text-beige" />
+              <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="break-all hover:text-beige">
+                {siteInfo.social.instagramHandle}
               </a>
             </li>
             <li className="flex gap-3">
