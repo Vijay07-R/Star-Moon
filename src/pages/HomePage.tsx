@@ -100,7 +100,7 @@ export default function HomePage() {
             </div>
             <h2 className="mt-6 text-4xl font-bold lg:text-5xl">A Sanctuary of Beauty & Self-Care</h2>
             <p className="mt-6 leading-relaxed text-espresso/80 text-lg">
-              Founded in 2014, Star Moon Beauty Salon was created with one simple belief: every woman deserves to feel confident,
+              Founded in 2014, Star Moon Beauty Salon & Studio was created with one simple belief: every woman deserves to feel confident,
               cared for and beautiful. Our team of certified stylists, makeup artists and therapists brings skill and warmth to every
               appointment.
             </p>

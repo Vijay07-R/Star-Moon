@@ -1,4 +1,4 @@
-# Star Moon Beauty Salon — Frontend
+# Star Moon Beauty Salon & Studio — Frontend
 
 React + TypeScript + Vite + Tailwind CSS v4 + React Router + Lucide React.
 

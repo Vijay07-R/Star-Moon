@@ -32,10 +32,13 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <ButtonLink to="/contact#appointment" variant="beige" size="sm" className="hidden sm:inline-flex">
-              <CalendarCheck className="h-4 w-4" aria-hidden />
-              Book Appointment
-            </ButtonLink>
+            {/* Wrapper does the hiding: ButtonLink's own inline-flex would override `hidden` */}
+            <div className="hidden sm:block">
+              <ButtonLink to="/contact#appointment" variant="beige" size="sm">
+                <CalendarCheck className="h-4 w-4" aria-hidden />
+                Book Appointment
+              </ButtonLink>
+            </div>
             <button
               type="button"
               onClick={() => setOpenOn(open ? null : pathname)}

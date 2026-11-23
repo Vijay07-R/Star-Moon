@@ -86,7 +86,7 @@ export default function ContactPage() {
             </div>
             <div className="overflow-hidden rounded-3xl shadow-2xl border-4 border-beige/20">
               <iframe
-                title="Star Moon Beauty Salon location map"
+                title="Star Moon Beauty Salon & Studio location map"
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(siteInfo.mapQuery)}&z=15&output=embed`}
                 className="h-[450px] w-full border-0"
                 loading="lazy"

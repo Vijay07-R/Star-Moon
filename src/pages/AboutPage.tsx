@@ -34,7 +34,7 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold lg:text-5xl mb-6">Where Beauty Meets Comfort & Care</h2>
               <div className="space-y-4 leading-relaxed text-espresso/80 text-lg">
                 <p>
-                  Star Moon Beauty Salon is a premium, women-only salon offering complete hair, skin, makeup, nail and spa services under
+                  Star Moon Beauty Salon & Studio is a premium, women-only salon offering complete hair, skin, makeup, nail and spa services under
                   one roof. We believe beauty is personal — so every visit begins with listening to you.
                 </p>
                 <p>

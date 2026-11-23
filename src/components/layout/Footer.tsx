@@ -83,7 +83,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col items-center justify-between gap-2 py-5 text-center text-xs sm:flex-row sm:text-left">
-          <p>© {year} Star Moon Beauty Salon. All rights reserved.</p>
+          <p>© {year} Star Moon Beauty Salon & Studio. All rights reserved.</p>
           <p>
             <Link to="/contact#appointment" className="text-beige hover:underline">
               Book your appointment today

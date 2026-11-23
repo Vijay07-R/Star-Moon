@@ -2,7 +2,7 @@ import type { NavItem } from '../types'
 
 export const siteInfo = {
   name: 'Star Moon',
-  tagline: 'Beauty Salon',
+  tagline: 'Beauty Salon & Studio',
   address: '28/9, Muthalamman Koil St Extension, Nallan Kuppam, West Mambalam, Chennai, Tamil Nadu 600033',
   mapQuery: 'Star Moon Beauty Salon, 28/9 Muthalamman Koil St Extension, West Mambalam, Chennai 600033',
   /** Google Maps link to the salon's business listing */
@@ -21,7 +21,7 @@ export const siteInfo = {
   },
 }
 
-export const whatsappLink = (text = 'Hello Star Moon Beauty Salon, I would like to know more about your services.') =>
+export const whatsappLink = (text = 'Hello Star Moon Beauty Salon & Studio, I would like to know more about your services.') =>
   `https://wa.me/${siteInfo.whatsapp}?text=${encodeURIComponent(text)}`
 
 export const navItems: NavItem[] = [
