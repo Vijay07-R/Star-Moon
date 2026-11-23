@@ -63,6 +63,8 @@ export interface GalleryImage {
   src: string
   title: string
   category: GalleryCategory
+  /** CSS object-position for the square thumbnail crop, e.g. '50% 20%' to keep faces in frame */
+  position?: string
 }
 
 export interface TeamMember {

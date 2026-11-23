@@ -1,5 +1,10 @@
 import type { FilterOption, GalleryCategory, GalleryImage } from '../types'
 import { img } from './images'
+import bridalLehenga from '../assets/gallery/bridal-lehenga.jpg'
+import bridalFlowerJadai from '../assets/gallery/bridal-flower-jadai.jpg'
+import sareeLook from '../assets/gallery/saree-look.jpg'
+import jewelledBraid from '../assets/gallery/jewelled-braid.jpg'
+import receptionLook from '../assets/gallery/reception-look.jpg'
 
 export const galleryCategories: FilterOption<GalleryCategory>[] = [
   { value: 'all', label: 'All' },
@@ -11,6 +16,13 @@ export const galleryCategories: FilterOption<GalleryCategory>[] = [
 ]
 
 export const galleryImages: GalleryImage[] = [
+  // Our own salon work (shown first)
+  { id: 19, src: bridalLehenga, title: 'Bridal lehenga look', category: 'bridal', position: '50% 25%' },
+  { id: 20, src: bridalFlowerJadai, title: 'Traditional flower jadai', category: 'hair', position: '50% 30%' },
+  { id: 21, src: sareeLook, title: 'Silk saree glam', category: 'transformations', position: '50% 20%' },
+  { id: 22, src: jewelledBraid, title: 'Jewelled braid styling', category: 'hair', position: '50% 30%' },
+  { id: 23, src: receptionLook, title: 'Soft reception glam', category: 'bridal', position: '50% 15%' },
+  // Stock photography
   { id: 1, src: img('1519741497674-611481863552', 1200), title: 'Classic bridal elegance', category: 'bridal' },
   { id: 2, src: img('1560066984-138dadb4c035', 1200), title: 'Our styling lounge', category: 'interior' },
   { id: 3, src: img('1562322140-8baeececf3df', 1200), title: 'Precision colour work', category: 'hair' },

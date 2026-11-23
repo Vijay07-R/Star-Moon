@@ -39,7 +39,12 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
             className="group relative aspect-square overflow-hidden rounded-lg bg-blush focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-beige"
             aria-label={`View ${image.title}`}
           >
-            <SmartImage src={image.src} alt={image.title} className="h-full w-full object-cover" />
+            <SmartImage
+              src={image.src}
+              alt={image.title}
+              className="h-full w-full object-cover"
+              style={image.position ? { objectPosition: image.position } : undefined}
+            />
             <span className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-burgundy/70 p-3 text-center text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
               <ZoomIn className="h-6 w-6 text-beige" aria-hidden />
               <span className="font-serif text-base md:text-lg">{image.title}</span>
