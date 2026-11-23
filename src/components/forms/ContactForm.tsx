@@ -29,10 +29,10 @@ export default function ContactForm() {
 
   if (sentTo) {
     return (
-      <div role="status" className="flex flex-col items-center rounded-xl border border-emerald-deep/20 bg-emerald-soft p-8 text-center">
-        <CircleCheck className="h-12 w-12 text-emerald-deep" aria-hidden />
+      <div role="status" className="flex flex-col items-center rounded-xl border border-burgundy/20 bg-blush p-8 text-center">
+        <CircleCheck className="h-12 w-12 text-burgundy" aria-hidden />
         <h3 className="mt-4 text-2xl font-semibold">Thank you, {sentTo}!</h3>
-        <p className="mt-2 max-w-sm text-forest/75">Your message has been received. Our team will get back to you within 24 hours.</p>
+        <p className="mt-2 max-w-sm text-espresso/75">Your message has been received. Our team will get back to you within 24 hours.</p>
         <Button variant="outline" className="mt-6" onClick={() => setSentTo(null)}>
           Send another message
         </Button>

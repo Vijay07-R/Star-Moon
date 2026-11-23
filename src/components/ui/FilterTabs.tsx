@@ -21,8 +21,8 @@ export default function FilterTabs<T extends string>({ options, active, onChange
             onClick={() => onChange(option.value)}
             className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors md:px-5 ${
               isActive
-                ? 'border-emerald-deep bg-emerald-deep text-white'
-                : 'border-forest/15 bg-white text-forest/80 hover:border-gold hover:text-emerald-deep'
+                ? 'border-burgundy bg-burgundy text-white'
+                : 'border-espresso/15 bg-white text-espresso/80 hover:border-beige hover:text-burgundy'
             }`}
           >
             {option.label}

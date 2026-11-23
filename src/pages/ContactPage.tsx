@@ -33,7 +33,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="relative bg-gradient-to-br from-emerald-deep to-emerald-dark overflow-hidden py-16 md:py-20">
+      <section className="relative bg-gradient-to-br from-burgundy to-burgundy-dark overflow-hidden py-16 md:py-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3MnYxNkgzNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
         <div className="container-page relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -44,7 +44,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="section bg-gradient-to-b from-white to-ivory">
+      <section className="section bg-gradient-to-b from-white to-cream">
         <div className="container-page">
           <div className="grid gap-8 md:grid-cols-3">
             {contactCards.map(({ icon: Icon, title, info, action, href }) => (
@@ -53,21 +53,21 @@ export default function ContactPage() {
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1"
               >
                 <div className="p-8 text-center">
-                  <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-emerald-deep to-emerald-dark mb-6 group-hover:scale-110 transition-transform">
-                    <Icon className="h-10 w-10 text-gold" aria-hidden />
+                  <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-burgundy to-burgundy-dark mb-6 group-hover:scale-110 transition-transform">
+                    <Icon className="h-10 w-10 text-beige" aria-hidden />
                   </div>
                   <h2 className="text-2xl font-bold mb-4">{title}</h2>
-                  <p className="text-forest/75 leading-relaxed mb-6 min-h-[3rem]">{info}</p>
+                  <p className="text-espresso/75 leading-relaxed mb-6 min-h-[3rem]">{info}</p>
                   <a
                     href={href}
                     target={href.startsWith('http') ? '_blank' : undefined}
                     rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 rounded-lg border-2 border-emerald-deep px-6 py-3 font-semibold text-emerald-deep transition-all hover:bg-emerald-deep hover:text-white"
+                    className="inline-flex items-center gap-2 rounded-lg border-2 border-burgundy px-6 py-3 font-semibold text-burgundy transition-all hover:bg-burgundy hover:text-white"
                   >
                     {action}
                   </a>
                 </div>
-                <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
+                <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-beige via-beige-light to-beige" />
               </div>
             ))}
           </div>
@@ -79,11 +79,11 @@ export default function ContactPage() {
         <div className="container-page">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
-              <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Location</span>
-              <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto mb-6" />
+              <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Location</span>
+              <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
               <h2 className="text-4xl font-bold">Find Us On Map</h2>
             </div>
-            <div className="overflow-hidden rounded-3xl shadow-2xl border-4 border-gold/20">
+            <div className="overflow-hidden rounded-3xl shadow-2xl border-4 border-beige/20">
               <iframe
                 title="Star Moon Beauty Salon location map"
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(siteInfo.mapQuery)}&z=15&output=embed`}
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteInfo.mapQuery)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-emerald-deep hover:text-gold transition-colors font-semibold"
+                className="inline-flex items-center gap-2 text-burgundy hover:text-beige transition-colors font-semibold"
               >
                 <MapPin className="h-5 w-5" aria-hidden />
                 {siteInfo.address}
@@ -108,21 +108,21 @@ export default function ContactPage() {
       </section>
 
       {/* Appointment Booking */}
-      <section id="appointment" className="section scroll-mt-24 bg-gradient-to-b from-ivory to-emerald-soft/30">
+      <section id="appointment" className="section scroll-mt-24 bg-gradient-to-b from-cream to-blush/30">
         <div className="container-page">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
-              <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Book Appointment</span>
-              <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto mb-6" />
+              <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Book Appointment</span>
+              <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
               <h2 className="text-4xl font-bold lg:text-5xl">Schedule Your Visit</h2>
-              <p className="mt-4 text-lg text-forest/75">Fill in your details and we'll call you to confirm your slot</p>
+              <p className="mt-4 text-lg text-espresso/75">Fill in your details and we'll call you to confirm your slot</p>
             </div>
-            <div className="rounded-3xl bg-white p-8 md:p-12 shadow-2xl border-2 border-gold/20">
-              <div className="flex items-start gap-4 mb-8 p-5 rounded-xl bg-gradient-to-br from-emerald-soft to-ivory border-l-4 border-gold">
-                <Calendar className="h-6 w-6 text-gold shrink-0 mt-0.5" />
+            <div className="rounded-3xl bg-white p-8 md:p-12 shadow-2xl border-2 border-beige/20">
+              <div className="flex items-start gap-4 mb-8 p-5 rounded-xl bg-gradient-to-br from-blush to-cream border-l-4 border-beige">
+                <Calendar className="h-6 w-6 text-beige shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-emerald-deep mb-1">Appointment Confirmation</p>
-                  <p className="text-sm text-forest/75">
+                  <p className="font-semibold text-burgundy mb-1">Appointment Confirmation</p>
+                  <p className="text-sm text-espresso/75">
                     We'll contact you within 1 hour to confirm your preferred date and time slot
                   </p>
                 </div>
@@ -138,16 +138,16 @@ export default function ContactPage() {
         <div className="container-page">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Visit Us</span>
-              <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto mb-6" />
+              <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Visit Us</span>
+              <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
               <h2 className="text-4xl font-bold">Business Hours</h2>
             </div>
-            <div className="rounded-3xl bg-gradient-to-br from-emerald-deep to-emerald-dark p-8 md:p-10 shadow-2xl">
+            <div className="rounded-3xl bg-gradient-to-br from-burgundy to-burgundy-dark p-8 md:p-10 shadow-2xl">
               <ul className="divide-y divide-white/10 space-y-6">
                 {siteInfo.hours.map((h, index) => (
                   <li key={h.days} className={`flex justify-between gap-4 ${index === 0 ? '' : 'pt-6'}`}>
                     <span className="text-lg font-semibold text-white">{h.days}</span>
-                    <span className="text-lg font-bold text-gold">{h.time}</span>
+                    <span className="text-lg font-bold text-beige">{h.time}</span>
                   </li>
                 ))}
               </ul>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                 <p className="text-white/90 mb-4">Walk-ins welcome, but appointments are recommended</p>
                 <a
                   href={siteInfo.phoneHref}
-                  className="inline-flex items-center gap-2 rounded-lg bg-gold px-8 py-3 font-bold text-emerald-deep transition-all hover:bg-gold-light hover:scale-105"
+                  className="inline-flex items-center gap-2 rounded-lg bg-beige px-8 py-3 font-bold text-burgundy transition-all hover:bg-beige-light hover:scale-105"
                 >
                   <Phone className="h-5 w-5" aria-hidden />
                   Call {siteInfo.phone}

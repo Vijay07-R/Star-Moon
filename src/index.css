@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-emerald-deep: #064e3b;
-  --color-emerald-dark: #053f30;
-  --color-emerald-soft: #e7efe9;
-  --color-gold: #d4af37;
-  --color-gold-dark: #9c7c1f;
-  --color-gold-light: #f3e7bf;
-  --color-ivory: #f8f5eb;
-  --color-forest: #24352d;
+  --color-burgundy: #6d1a2c;
+  --color-burgundy-dark: #521320;
+  --color-blush: #f5e9e4;
+  --color-beige: #d8bf9a;
+  --color-beige-dark: #8a6a45;
+  --color-beige-light: #efe4d2;
+  --color-cream: #fbf7f0;
+  --color-espresso: #3b2226;
 
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -19,13 +19,13 @@
     scroll-padding-top: 6rem;
   }
   body {
-    @apply bg-ivory font-sans text-forest antialiased;
+    @apply bg-cream font-sans text-espresso antialiased;
   }
   h1, h2, h3, h4 {
-    @apply font-serif text-forest;
+    @apply font-serif text-espresso;
   }
   ::selection {
-    @apply bg-gold-light text-forest;
+    @apply bg-beige-light text-espresso;
   }
 }
 
@@ -37,7 +37,7 @@
     @apply py-16 md:py-24;
   }
   .form-input {
-    @apply w-full rounded-md border border-forest/15 bg-white px-4 py-3 text-[15px] text-forest placeholder:text-forest/40 transition-colors focus:border-emerald-deep focus:ring-2 focus:ring-emerald-deep/15 focus:outline-none;
+    @apply w-full rounded-md border border-espresso/15 bg-white px-4 py-3 text-[15px] text-espresso placeholder:text-espresso/40 transition-colors focus:border-burgundy focus:ring-2 focus:ring-burgundy/15 focus:outline-none;
   }
   .form-input-error {
     @apply border-red-500 focus:border-red-500 focus:ring-red-500/15;

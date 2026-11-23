@@ -35,7 +35,7 @@ export default function SocialIcons() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={l.label}
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 text-gold transition-colors hover:bg-gold hover:text-forest"
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-beige/40 text-beige transition-colors hover:bg-beige hover:text-espresso"
         >
           {l.icon}
         </a>

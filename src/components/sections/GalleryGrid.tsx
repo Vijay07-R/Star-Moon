@@ -36,14 +36,14 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
             key={image.id}
             type="button"
             onClick={() => setIndex(i)}
-            className="group relative aspect-square overflow-hidden rounded-lg bg-emerald-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+            className="group relative aspect-square overflow-hidden rounded-lg bg-blush focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-beige"
             aria-label={`View ${image.title}`}
           >
             <SmartImage src={image.src} alt={image.title} className="h-full w-full object-cover" />
-            <span className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-emerald-deep/70 p-3 text-center text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-              <ZoomIn className="h-6 w-6 text-gold" aria-hidden />
+            <span className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-burgundy/70 p-3 text-center text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+              <ZoomIn className="h-6 w-6 text-beige" aria-hidden />
               <span className="font-serif text-base md:text-lg">{image.title}</span>
-              <span className="text-xs tracking-widest text-gold uppercase">{categoryLabel(image.category)}</span>
+              <span className="text-xs tracking-widest text-beige uppercase">{categoryLabel(image.category)}</span>
             </span>
           </button>
         ))}

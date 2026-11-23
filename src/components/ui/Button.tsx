@@ -1,18 +1,18 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
-type Variant = 'primary' | 'gold' | 'outline' | 'outline-light' | 'ghost'
+type Variant = 'primary' | 'beige' | 'outline' | 'outline-light' | 'ghost'
 type Size = 'sm' | 'md' | 'lg'
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-md font-medium tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:cursor-not-allowed disabled:opacity-60'
+  'inline-flex items-center justify-center gap-2 rounded-md font-medium tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-beige disabled:cursor-not-allowed disabled:opacity-60'
 
 const variants: Record<Variant, string> = {
-  primary: 'bg-emerald-deep text-white hover:bg-emerald-dark',
-  gold: 'bg-gold text-forest hover:bg-[#c29f2c]',
-  outline: 'border border-emerald-deep text-emerald-deep hover:bg-emerald-deep hover:text-white',
-  'outline-light': 'border border-white/70 text-white hover:bg-white hover:text-emerald-deep',
-  ghost: 'text-emerald-deep hover:text-gold-dark',
+  primary: 'bg-burgundy text-white hover:bg-burgundy-dark',
+  beige: 'bg-beige text-espresso hover:bg-[#c9ab82]',
+  outline: 'border border-burgundy text-burgundy hover:bg-burgundy hover:text-white',
+  'outline-light': 'border border-white/70 text-white hover:bg-white hover:text-burgundy',
+  ghost: 'text-burgundy hover:text-beige-dark',
 }
 
 const sizes: Record<Size, string> = {

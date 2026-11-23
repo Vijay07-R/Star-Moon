@@ -12,8 +12,8 @@ interface FormFieldProps {
 export default function FormField({ id, label, required, error, children, className = '' }: FormFieldProps) {
   return (
     <div className={className}>
-      <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-forest">
-        {label} {required && <span className="text-gold-dark">*</span>}
+      <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-espresso">
+        {label} {required && <span className="text-beige-dark">*</span>}
       </label>
       {children}
       {error && (

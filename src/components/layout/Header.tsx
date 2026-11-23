@@ -13,13 +13,13 @@ export default function Header() {
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `relative py-2 text-[15px] font-medium transition-colors ${
-      isActive ? 'text-gold after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-gold' : 'text-white/85 hover:text-gold'
+      isActive ? 'text-beige after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:bg-beige' : 'text-white/85 hover:text-beige'
     }`
 
   return (
     <header className="sticky top-0 z-50 shadow-sm">
       {/* Main navigation */}
-      <div className="border-b border-gold/20 bg-emerald-deep">
+      <div className="border-b border-beige/20 bg-burgundy">
         <div className="container-page flex h-[72px] items-center justify-between gap-4">
           <Logo />
 
@@ -32,7 +32,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <ButtonLink to="/contact#appointment" variant="gold" size="sm" className="hidden sm:inline-flex">
+            <ButtonLink to="/contact#appointment" variant="beige" size="sm" className="hidden sm:inline-flex">
               <CalendarCheck className="h-4 w-4" aria-hidden />
               Book Appointment
             </ButtonLink>
@@ -51,7 +51,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {open && (
-          <nav id="mobile-menu" aria-label="Mobile navigation" className="border-t border-white/10 bg-emerald-deep xl:hidden">
+          <nav id="mobile-menu" aria-label="Mobile navigation" className="border-t border-white/10 bg-burgundy xl:hidden">
             <div className="container-page flex flex-col py-3">
               {navItems.map((item) => (
                 <NavLink
@@ -59,13 +59,13 @@ export default function Header() {
                   to={item.path}
                   end={item.path === '/'}
                   className={({ isActive }) =>
-                    `border-b border-white/5 py-3 text-base font-medium ${isActive ? 'text-gold' : 'text-white/90 hover:text-gold'}`
+                    `border-b border-white/5 py-3 text-base font-medium ${isActive ? 'text-beige' : 'text-white/90 hover:text-beige'}`
                   }
                 >
                   {item.label}
                 </NavLink>
               ))}
-              <ButtonLink to="/contact#appointment" variant="gold" className="mt-4 mb-2 sm:hidden">
+              <ButtonLink to="/contact#appointment" variant="beige" className="mt-4 mb-2 sm:hidden">
                 <CalendarCheck className="h-4 w-4" aria-hidden />
                 Book Appointment
               </ButtonLink>

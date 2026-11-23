@@ -9,7 +9,7 @@ export default function StarRating({ rating, size = 16 }: { rating: number; size
           width={size}
           height={size}
           aria-hidden
-          className={i < rating ? 'fill-gold text-gold' : 'fill-transparent text-forest/20'}
+          className={i < rating ? 'fill-beige text-beige' : 'fill-transparent text-espresso/20'}
         />
       ))}
     </div>

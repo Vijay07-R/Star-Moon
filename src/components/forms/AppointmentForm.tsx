@@ -55,10 +55,10 @@ export default function AppointmentForm() {
       year: 'numeric',
     })
     return (
-      <div role="status" className="rounded-xl border border-emerald-deep/20 bg-emerald-soft p-6 text-center md:p-10">
-        <CircleCheck className="mx-auto h-14 w-14 text-emerald-deep" aria-hidden />
+      <div role="status" className="rounded-xl border border-burgundy/20 bg-blush p-6 text-center md:p-10">
+        <CircleCheck className="mx-auto h-14 w-14 text-burgundy" aria-hidden />
         <h3 className="mt-4 text-2xl font-semibold md:text-3xl">Appointment Request Received!</h3>
-        <p className="mx-auto mt-2 max-w-md text-forest/75">
+        <p className="mx-auto mt-2 max-w-md text-espresso/75">
           Thank you, {data.name.trim().split(' ')[0]}. We will call you on {data.phone} shortly to confirm your booking.
         </p>
         <dl className="mx-auto mt-6 grid max-w-md gap-3 rounded-lg bg-white p-5 text-left text-[15px]">
@@ -68,8 +68,8 @@ export default function AppointmentForm() {
             ['Date', formattedDate],
             ['Time', data.time],
           ].map(([k, v]) => (
-            <div key={k} className="flex justify-between gap-4 border-b border-forest/5 pb-2 last:border-0 last:pb-0">
-              <dt className="text-forest/60">{k}</dt>
+            <div key={k} className="flex justify-between gap-4 border-b border-espresso/5 pb-2 last:border-0 last:pb-0">
+              <dt className="text-espresso/60">{k}</dt>
               <dd className="text-right font-medium">{v}</dd>
             </div>
           ))}
@@ -135,8 +135,8 @@ export default function AppointmentForm() {
         />
       </FormField>
       <div className="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-forest/60">
-          Fields marked <span className="text-gold-dark">*</span> are required.
+        <p className="text-sm text-espresso/60">
+          Fields marked <span className="text-beige-dark">*</span> are required.
         </p>
         <Button type="submit" size="lg" disabled={submitting}>
           <CalendarCheck className="h-5 w-5" aria-hidden /> {submitting ? 'Submitting…' : 'Submit Appointment'}

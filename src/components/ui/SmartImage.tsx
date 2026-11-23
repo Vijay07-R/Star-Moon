@@ -13,9 +13,9 @@ export default function SmartImage({ className = '', alt, ...rest }: SmartImageP
       <div
         role="img"
         aria-label={alt}
-        className={`flex items-center justify-center bg-gradient-to-br from-emerald-soft to-gold-light ${className}`}
+        className={`flex items-center justify-center bg-gradient-to-br from-blush to-beige-light ${className}`}
       >
-        <Flower2 className="h-10 w-10 text-emerald-deep/40" aria-hidden />
+        <Flower2 className="h-10 w-10 text-burgundy/40" aria-hidden />
       </div>
     )
   }

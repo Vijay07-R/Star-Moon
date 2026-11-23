@@ -30,24 +30,24 @@ export default function ServiceGrid({ services }: { services: Service[] }) {
           <div className="grid md:grid-cols-2">
             <SmartImage src={selected.image} alt={selected.name} className="h-56 w-full object-cover md:h-full" />
             <div className="p-6 md:p-8">
-              <p className="text-xs font-semibold tracking-[0.25em] text-gold-dark uppercase">Service Details</p>
+              <p className="text-xs font-semibold tracking-[0.25em] text-beige-dark uppercase">Service Details</p>
               <h3 id="service-dialog-title" className="mt-2 text-2xl font-semibold">
                 {selected.name}
               </h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-forest/75">{selected.description}</p>
+              <p className="mt-3 text-[15px] leading-relaxed text-espresso/75">{selected.description}</p>
               <div className="mt-5 flex flex-wrap gap-4 text-sm">
-                <span className="flex items-center gap-1.5 rounded-full bg-ivory px-3 py-1.5">
-                  <Clock className="h-4 w-4 text-gold-dark" aria-hidden /> {selected.duration}
+                <span className="flex items-center gap-1.5 rounded-full bg-cream px-3 py-1.5">
+                  <Clock className="h-4 w-4 text-beige-dark" aria-hidden /> {selected.duration}
                 </span>
-                <span className="flex items-center gap-1.5 rounded-full bg-ivory px-3 py-1.5">
-                  <Tag className="h-4 w-4 text-gold-dark" aria-hidden /> From {formatPrice(selected.startingPrice)}
+                <span className="flex items-center gap-1.5 rounded-full bg-cream px-3 py-1.5">
+                  <Tag className="h-4 w-4 text-beige-dark" aria-hidden /> From {formatPrice(selected.startingPrice)}
                 </span>
               </div>
               <h4 className="mt-6 font-sans text-sm font-semibold tracking-wide uppercase">What&apos;s included</h4>
               <ul className="mt-3 space-y-2">
                 {selected.highlights.map((h) => (
-                  <li key={h} className="flex items-start gap-2 text-[15px] text-forest/80">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-deep" aria-hidden /> {h}
+                  <li key={h} className="flex items-start gap-2 text-[15px] text-espresso/80">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-burgundy" aria-hidden /> {h}
                   </li>
                 ))}
               </ul>

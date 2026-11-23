@@ -11,7 +11,7 @@ export default function GalleryPage() {
 
   return (
     <>
-      <section className="section bg-ivory">
+      <section className="section bg-cream">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center mb-8">
             <h1 className="text-4xl font-semibold sm:text-5xl"></h1>

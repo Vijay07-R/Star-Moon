@@ -13,7 +13,7 @@ export default function OffersPage() {
 
   return (
     <>
-      <section className="section bg-ivory">
+      <section className="section bg-cream">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center mb-8">
             <h1 className="text-4xl font-semibold sm:text-5xl">Offers &amp; Packages</h1>
@@ -29,20 +29,20 @@ export default function OffersPage() {
             { icon: Gift, title: 'Free Consultation', text: 'With every bridal package' },
             { icon: CalendarCheck, title: 'Flexible Scheduling', text: 'Split sessions across visits' },
           ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="flex items-center gap-4 rounded-xl border border-gold/30 bg-ivory p-5">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-deep">
-                <Icon className="h-5 w-5 text-gold" aria-hidden />
+            <div key={title} className="flex items-center gap-4 rounded-xl border border-beige/30 bg-cream p-5">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-burgundy">
+                <Icon className="h-5 w-5 text-beige" aria-hidden />
               </span>
               <div>
                 <p className="font-serif text-lg font-semibold">{title}</p>
-                <p className="text-sm text-forest/65">{text}</p>
+                <p className="text-sm text-espresso/65">{text}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="section bg-ivory">
+      <section className="section bg-cream">
         <div className="container-page">
           <SectionHeading
             eyebrow="Pricing"
@@ -55,9 +55,9 @@ export default function OffersPage() {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-col items-start gap-4 rounded-xl border border-forest/10 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
-            <p className="flex items-start gap-3 text-sm text-forest/70">
-              <Info className="mt-0.5 h-5 w-5 shrink-0 text-gold-dark" aria-hidden />
+          <div className="mt-12 flex flex-col items-start gap-4 rounded-xl border border-espresso/10 bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="flex items-start gap-3 text-sm text-espresso/70">
+              <Info className="mt-0.5 h-5 w-5 shrink-0 text-beige-dark" aria-hidden />
               Offers are valid for a limited period and cannot be combined with other discounts. Want a custom package for a group or
               family event? Contact us and we will create one for you.
             </p>

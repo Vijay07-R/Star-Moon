@@ -87,12 +87,12 @@ export default function AcademyPage() {
   return (
     <>
       {/* Hero Header */}
-      <section className="relative bg-gradient-to-br from-emerald-deep to-emerald-dark overflow-hidden">
+      <section className="relative bg-gradient-to-br from-burgundy to-burgundy-dark overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3MnYxNkgzNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
         <div className="container-page relative py-20 md:py-28">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border-2 border-gold/60 bg-white/10 backdrop-blur-sm px-5 py-2 mb-8">
-              <GraduationCap className="h-5 w-5 text-gold" aria-hidden />
+            <div className="inline-flex items-center gap-2 rounded-full border-2 border-beige/60 bg-white/10 backdrop-blur-sm px-5 py-2 mb-8">
+              <GraduationCap className="h-5 w-5 text-beige" aria-hidden />
               <span className="text-xs font-bold tracking-[0.2em] text-white uppercase">Professional Training</span>
             </div>
             <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl">Beauty Academy</h1>
@@ -100,12 +100,12 @@ export default function AcademyPage() {
               Launch your beauty career with industry-recognized certification and expert training
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <ButtonLink to="/contact" variant="gold" size="lg">
+              <ButtonLink to="/contact" variant="beige" size="lg">
                 <Calendar className="h-5 w-5" /> Enquire Now
               </ButtonLink>
               <a 
                 href="#courses" 
-                className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/70 px-8 py-3.5 font-medium text-white transition-colors hover:bg-white hover:text-emerald-deep"
+                className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/70 px-8 py-3.5 font-medium text-white transition-colors hover:bg-white hover:text-burgundy"
               >
                 View Courses
               </a>
@@ -118,28 +118,28 @@ export default function AcademyPage() {
       <section className="section bg-white">
         <div className="container-page grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Professional Training</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Professional Training</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full" />
             <h2 className="mt-6 text-4xl font-bold lg:text-5xl">Transform Your Passion into a Profession</h2>
-            <p className="mt-6 leading-relaxed text-forest/80 text-lg">
+            <p className="mt-6 leading-relaxed text-espresso/80 text-lg">
               Star Moon Beauty Academy offers comprehensive beauty training courses designed to transform beginners into confident,
               skilled beauty professionals. With over 12 years of salon experience, we know exactly what the industry needs.
             </p>
-            <p className="mt-4 leading-relaxed text-forest/75">
+            <p className="mt-4 leading-relaxed text-espresso/75">
               Whether you want to start your own salon, work as a freelance artist, or join an established beauty brand, our
               certified courses will equip you with the technical skills and business knowledge you need to succeed.
             </p>
             <ul className="mt-8 space-y-3">
               {features.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 shrink-0 text-gold mt-0.5" aria-hidden /> 
-                  <span className="text-forest/75">{item}</span>
+                  <Check className="h-5 w-5 shrink-0 text-beige mt-0.5" aria-hidden /> 
+                  <span className="text-espresso/75">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="relative">
-            <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-gold/30 hidden sm:block" aria-hidden />
+            <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/30 hidden sm:block" aria-hidden />
             <SmartImage
               src={img('1522337360788-8b13dee7a37e', 1000, 1100)}
               alt="Beauty training at Star Moon Academy"
@@ -147,12 +147,12 @@ export default function AcademyPage() {
             />
             <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-2xl max-w-xs">
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-deep">
-                  <GraduationCap className="h-6 w-6 text-gold" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-burgundy">
+                  <GraduationCap className="h-6 w-6 text-beige" />
                 </div>
                 <div>
-                  <p className="font-serif text-3xl font-bold text-emerald-deep">500+</p>
-                  <p className="text-sm text-forest/70">Students Trained</p>
+                  <p className="font-serif text-3xl font-bold text-burgundy">500+</p>
+                  <p className="text-sm text-espresso/70">Students Trained</p>
                 </div>
               </div>
             </div>
@@ -161,24 +161,24 @@ export default function AcademyPage() {
       </section>
 
       {/* Courses */}
-      <section id="courses" className="section bg-gradient-to-b from-ivory to-emerald-soft/30">
+      <section id="courses" className="section bg-gradient-to-b from-cream to-blush/30">
         <div className="container-page">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Our Courses</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Courses</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto" />
             <h2 className="mt-6 text-4xl font-bold lg:text-5xl">Professional Beauty Training Courses</h2>
-            <p className="mt-4 text-lg text-forest/75">Choose from our range of specialized courses and master the skills that matter</p>
+            <p className="mt-4 text-lg text-espresso/75">Choose from our range of specialized courses and master the skills that matter</p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
               <article key={course.id} className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1">
                 {course.popular && (
-                  <div className="absolute top-4 right-4 z-10 flex items-center gap-1 rounded-full bg-gold px-3 py-1 text-xs font-bold text-white">
+                  <div className="absolute top-4 right-4 z-10 flex items-center gap-1 rounded-full bg-beige px-3 py-1 text-xs font-bold text-white">
                     <Star className="h-3 w-3" /> Popular
                   </div>
                 )}
                 {course.featured && (
-                  <div className="absolute top-4 right-4 z-10 rounded-full bg-emerald-deep px-3 py-1 text-xs font-bold text-white">
+                  <div className="absolute top-4 right-4 z-10 rounded-full bg-burgundy px-3 py-1 text-xs font-bold text-white">
                     Featured
                   </div>
                 )}
@@ -188,17 +188,17 @@ export default function AcademyPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3">{course.title}</h3>
-                  <div className="flex items-center gap-4 mb-4 text-sm text-forest/65">
+                  <div className="flex items-center gap-4 mb-4 text-sm text-espresso/65">
                     <span className="flex items-center gap-1.5">
-                      <Clock className="h-4 w-4 text-gold" aria-hidden />
+                      <Clock className="h-4 w-4 text-beige" aria-hidden />
                       {course.duration}
                     </span>
-                    <span className="font-bold text-lg text-emerald-deep">{course.fee}</span>
+                    <span className="font-bold text-lg text-burgundy">{course.fee}</span>
                   </div>
                   <ul className="space-y-2 mb-6">
                     {course.modules.map((module) => (
-                      <li key={module} className="flex items-start gap-2 text-sm text-forest/75">
-                        <Check className="h-4 w-4 shrink-0 text-gold mt-0.5" aria-hidden />
+                      <li key={module} className="flex items-start gap-2 text-sm text-espresso/75">
+                        <Check className="h-4 w-4 shrink-0 text-beige mt-0.5" aria-hidden />
                         {module}
                       </li>
                     ))}
@@ -218,19 +218,19 @@ export default function AcademyPage() {
       <section className="section bg-white">
         <div className="container-page">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Why Choose Us</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Why Choose Us</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto" />
             <h2 className="mt-6 text-4xl font-bold lg:text-5xl">Why Train at Star Moon Academy?</h2>
-            <p className="mt-4 text-lg text-forest/75">More than just technical training — we prepare you for a successful beauty career</p>
+            <p className="mt-4 text-lg text-espresso/75">More than just technical training — we prepare you for a successful beauty career</p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="group rounded-2xl border-2 border-gold/20 bg-gradient-to-br from-ivory to-white p-8 text-center transition-all hover:border-gold hover:shadow-xl">
-                <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-emerald-deep mb-6 group-hover:scale-110 transition-transform">
-                  <Icon className="h-8 w-8 text-gold" aria-hidden />
+              <div key={title} className="group rounded-2xl border-2 border-beige/20 bg-gradient-to-br from-cream to-white p-8 text-center transition-all hover:border-beige hover:shadow-xl">
+                <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-burgundy mb-6 group-hover:scale-110 transition-transform">
+                  <Icon className="h-8 w-8 text-beige" aria-hidden />
                 </div>
                 <h3 className="text-lg font-bold mb-3">{title}</h3>
-                <p className="text-[15px] leading-relaxed text-forest/75">{text}</p>
+                <p className="text-[15px] leading-relaxed text-espresso/75">{text}</p>
               </div>
             ))}
           </div>
@@ -238,13 +238,13 @@ export default function AcademyPage() {
       </section>
 
       {/* Student Achievement & Certificate Gallery */}
-      <section className="section bg-gradient-to-b from-emerald-soft/50 to-ivory">
+      <section className="section bg-gradient-to-b from-blush/50 to-cream">
         <div className="container-page">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Student Success</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Student Success</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto" />
             <h2 className="mt-6 text-4xl font-bold lg:text-5xl">Our Certified Graduates</h2>
-            <p className="mt-4 text-lg text-forest/75">
+            <p className="mt-4 text-lg text-espresso/75">
               Celebrating the achievements of students who completed their professional beauty training
             </p>
           </div>
@@ -261,7 +261,7 @@ export default function AcademyPage() {
                     alt={cert.alt}
                     className="w-full h-full object-cover transition-transform group-hover:scale-110" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep/80 via-emerald-deep/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-burgundy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <div className="text-center text-white p-6">
                       <Award className="h-12 w-12 mx-auto mb-3" />
                       <p className="font-bold text-lg">View Certificate</p>
@@ -269,8 +269,8 @@ export default function AcademyPage() {
                   </div>
                 </div>
                 <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1.5 shadow-lg">
-                  <Award className="h-4 w-4 text-gold" />
-                  <span className="text-xs font-bold text-emerald-deep">Certified</span>
+                  <Award className="h-4 w-4 text-beige" />
+                  <span className="text-xs font-bold text-burgundy">Certified</span>
                 </div>
               </div>
             ))}
@@ -279,18 +279,18 @@ export default function AcademyPage() {
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-8 bg-white rounded-2xl p-8 shadow-lg">
               <div className="text-center">
-                <p className="font-serif text-4xl font-bold text-emerald-deep">500+</p>
-                <p className="text-sm text-forest/70 mt-1">Students Certified</p>
+                <p className="font-serif text-4xl font-bold text-burgundy">500+</p>
+                <p className="text-sm text-espresso/70 mt-1">Students Certified</p>
               </div>
-              <div className="h-12 w-px bg-forest/20" />
+              <div className="h-12 w-px bg-espresso/20" />
               <div className="text-center">
-                <p className="font-serif text-4xl font-bold text-emerald-deep">95%</p>
-                <p className="text-sm text-forest/70 mt-1">Placement Rate</p>
+                <p className="font-serif text-4xl font-bold text-burgundy">95%</p>
+                <p className="text-sm text-espresso/70 mt-1">Placement Rate</p>
               </div>
-              <div className="h-12 w-px bg-forest/20" />
+              <div className="h-12 w-px bg-espresso/20" />
               <div className="text-center">
-                <p className="font-serif text-4xl font-bold text-emerald-deep">12+</p>
-                <p className="text-sm text-forest/70 mt-1">Years Experience</p>
+                <p className="font-serif text-4xl font-bold text-burgundy">12+</p>
+                <p className="text-sm text-espresso/70 mt-1">Years Experience</p>
               </div>
             </div>
           </div>
@@ -300,7 +300,7 @@ export default function AcademyPage() {
       {/* CTA */}
       <section className="section bg-white">
         <div className="container-page">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-deep to-emerald-dark">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-burgundy to-burgundy-dark">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3MnYxNkgzNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
             <SmartImage
               src={img('1522337360788-8b13dee7a37e', 1600, 600)}
@@ -310,7 +310,7 @@ export default function AcademyPage() {
               className="absolute inset-0 h-full w-full object-cover opacity-10"
             />
             <div className="relative flex flex-col items-center gap-6 px-6 py-16 text-center md:px-16 md:py-20">
-              <GraduationCap className="h-16 w-16 text-gold" />
+              <GraduationCap className="h-16 w-16 text-beige" />
               <h2 className="max-w-2xl text-4xl font-bold text-white md:text-5xl">
                 Ready to Turn Your Passion into a Profession?
               </h2>
@@ -318,12 +318,12 @@ export default function AcademyPage() {
                 Join Star Moon Beauty Academy and learn from the best. Limited seats available. Enroll now!
               </p>
               <div className="flex flex-col gap-4 sm:flex-row mt-4">
-                <ButtonLink to="/contact" variant="gold" size="lg" className="shadow-lg">
+                <ButtonLink to="/contact" variant="beige" size="lg" className="shadow-lg">
                   <Calendar className="h-5 w-5" aria-hidden /> Contact for Admission
                 </ButtonLink>
                 <a 
                   href="tel:+919876543210" 
-                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/70 px-8 py-3.5 font-medium text-white transition-colors hover:bg-white hover:text-emerald-deep"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/70 px-8 py-3.5 font-medium text-white transition-colors hover:bg-white hover:text-burgundy"
                 >
                   Call Us Now
                 </a>

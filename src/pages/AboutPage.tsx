@@ -31,7 +31,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="relative bg-gradient-to-br from-emerald-deep to-emerald-dark overflow-hidden py-16 md:py-20">
+      <section className="relative bg-gradient-to-br from-burgundy to-burgundy-dark overflow-hidden py-16 md:py-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3MnYxNkgzNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
         <div className="container-page relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -45,7 +45,7 @@ export default function AboutPage() {
         <div className="container-page">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div className="relative">
-              <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-gold/30 hidden sm:block" aria-hidden />
+              <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/30 hidden sm:block" aria-hidden />
               <SmartImage 
                 src={img('1522337360788-8b13dee7a37e', 1000, 1100)} 
                 alt="Stylist with a client at Star Moon" 
@@ -53,19 +53,19 @@ export default function AboutPage() {
               />
               <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-2xl">
                 <div className="flex items-center gap-3">
-                  <Award className="h-10 w-10 text-gold" />
+                  <Award className="h-10 w-10 text-beige" />
                   <div>
-                    <p className="font-serif text-3xl font-bold text-emerald-deep">Since 2014</p>
-                    <p className="text-sm text-forest/70">Serving women with care</p>
+                    <p className="font-serif text-3xl font-bold text-burgundy">Since 2014</p>
+                    <p className="text-sm text-espresso/70">Serving women with care</p>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Welcome to Star Moon</span>
-              <div className="h-1 w-16 bg-gold mt-2 rounded-full mb-6" />
+              <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Welcome to Star Moon</span>
+              <div className="h-1 w-16 bg-beige mt-2 rounded-full mb-6" />
               <h2 className="text-4xl font-bold lg:text-5xl mb-6">Where Beauty Meets Comfort & Care</h2>
-              <div className="space-y-4 leading-relaxed text-forest/80 text-lg">
+              <div className="space-y-4 leading-relaxed text-espresso/80 text-lg">
                 <p>
                   Star Moon Beauty Salon is a premium, women-only salon offering complete hair, skin, makeup, nail and spa services under
                   one roof. We believe beauty is personal — so every visit begins with listening to you.
@@ -78,9 +78,9 @@ export default function AboutPage() {
               <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
                 {stats.map((s) => (
                   <div key={s.label} className="text-center">
-                    <p className="font-serif text-3xl font-bold text-emerald-deep">{s.value}</p>
-                    <p className="text-xs text-forest/70 mt-2">{s.label}</p>
-                    <div className="h-1 w-12 bg-gold/30 mt-2 rounded-full mx-auto" />
+                    <p className="font-serif text-3xl font-bold text-burgundy">{s.value}</p>
+                    <p className="text-xs text-espresso/70 mt-2">{s.label}</p>
+                    <div className="h-1 w-12 bg-beige/30 mt-2 rounded-full mx-auto" />
                   </div>
                 ))}
               </div>
@@ -90,13 +90,13 @@ export default function AboutPage() {
       </section>
 
       {/* Experience & Expertise */}
-      <section className="section bg-gradient-to-b from-ivory to-emerald-soft/30">
+      <section className="section bg-gradient-to-b from-cream to-blush/30">
         <div className="container-page">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Our Expertise</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto mb-6" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Expertise</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
             <h2 className="text-4xl font-bold lg:text-5xl">Professional Beauty Services Since 2014</h2>
-            <p className="mt-4 text-lg text-forest/75">
+            <p className="mt-4 text-lg text-espresso/75">
               Over a decade of experience delivering exceptional beauty care to thousands of satisfied clients
             </p>
           </div>
@@ -104,11 +104,11 @@ export default function AboutPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
             {expertiseAreas.map(({ icon: Icon, title, description }) => (
               <div key={title} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
-                <div className="inline-flex items-center justify-center h-14 w-14 rounded-full bg-emerald-deep mb-6 group-hover:scale-110 transition-transform">
-                  <Icon className="h-7 w-7 text-gold" aria-hidden />
+                <div className="inline-flex items-center justify-center h-14 w-14 rounded-full bg-burgundy mb-6 group-hover:scale-110 transition-transform">
+                  <Icon className="h-7 w-7 text-beige" aria-hidden />
                 </div>
                 <h3 className="text-lg font-bold mb-3">{title}</h3>
-                <p className="text-sm leading-relaxed text-forest/75">{description}</p>
+                <p className="text-sm leading-relaxed text-espresso/75">{description}</p>
               </div>
             ))}
           </div>
@@ -116,10 +116,10 @@ export default function AboutPage() {
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
             <div className="grid items-center gap-10 lg:grid-cols-2">
               <div className="order-2 lg:order-1">
-                <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Our Story</span>
-                <div className="h-1 w-16 bg-gold mt-2 rounded-full mb-6" />
+                <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Story</span>
+                <div className="h-1 w-16 bg-beige mt-2 rounded-full mb-6" />
                 <h3 className="text-3xl font-bold mb-6">From a Small Studio to a Trusted Name</h3>
-                <div className="space-y-4 leading-relaxed text-forest/75">
+                <div className="space-y-4 leading-relaxed text-espresso/75">
                   <p>
                     Star Moon began in 2014 as a two-chair studio founded by Shalini Varma, a makeup artist with a dream of creating a salon
                     where women felt truly comfortable and confident.
@@ -154,10 +154,10 @@ export default function AboutPage() {
       <section className="section bg-white">
         <div className="container-page">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Certified Excellence</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto mb-6" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Certified Excellence</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
             <h2 className="text-4xl font-bold lg:text-5xl">Professional Certifications & Qualifications</h2>
-            <p className="mt-4 text-lg text-forest/75">
+            <p className="mt-4 text-lg text-espresso/75">
               Our team holds industry-recognized certifications and continuously updates their skills
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function AboutPage() {
             {certificates.map((cert) => (
               <div 
                 key={cert.id} 
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-ivory shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-cream shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
               >
                 <div className="relative overflow-hidden aspect-[3/4]">
                   <SmartImage 
@@ -174,7 +174,7 @@ export default function AboutPage() {
                     alt={cert.title}
                     className="w-full h-full object-cover transition-transform group-hover:scale-110" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep/90 via-emerald-deep/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
+                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
                     <div className="text-center text-white">
                       <Award className="h-12 w-12 mx-auto mb-3" />
                       <p className="font-bold text-lg">View Certificate</p>
@@ -183,11 +183,11 @@ export default function AboutPage() {
                 </div>
                 <div className="p-6 bg-white">
                   <h3 className="font-bold text-lg mb-2">{cert.title}</h3>
-                  <p className="text-sm text-forest/60">Certified {cert.year}</p>
+                  <p className="text-sm text-espresso/60">Certified {cert.year}</p>
                 </div>
                 <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1.5 shadow-lg">
-                  <Award className="h-4 w-4 text-gold" />
-                  <span className="text-xs font-bold text-emerald-deep">Certified</span>
+                  <Award className="h-4 w-4 text-beige" />
+                  <span className="text-xs font-bold text-burgundy">Certified</span>
                 </div>
               </div>
             ))}
@@ -196,7 +196,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section bg-ivory">
+      <section className="section bg-cream">
         <div className="container-page">
           <div className="grid gap-8 md:grid-cols-2">
             {[
@@ -211,12 +211,12 @@ export default function AboutPage() {
                 text: 'To be the most trusted women\'s beauty destination, known for skilled artistry, honest advice and an experience that clients look forward to.',
               },
             ].map(({ icon: Icon, title, text }) => (
-              <div key={title} className="group rounded-2xl border-2 border-gold/30 bg-white p-10 hover:border-gold transition-all hover:shadow-xl">
-                <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-deep mb-6 group-hover:scale-110 transition-transform">
-                  <Icon className="h-8 w-8 text-gold" aria-hidden />
+              <div key={title} className="group rounded-2xl border-2 border-beige/30 bg-white p-10 hover:border-beige transition-all hover:shadow-xl">
+                <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-burgundy mb-6 group-hover:scale-110 transition-transform">
+                  <Icon className="h-8 w-8 text-beige" aria-hidden />
                 </div>
                 <h2 className="text-3xl font-bold mb-4">{title}</h2>
-                <p className="text-lg leading-relaxed text-forest/75">{text}</p>
+                <p className="text-lg leading-relaxed text-espresso/75">{text}</p>
               </div>
             ))}
           </div>
@@ -227,10 +227,10 @@ export default function AboutPage() {
       <section className="section bg-white">
         <div className="container-page">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Our Team</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto mb-6" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Team</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
             <h2 className="text-4xl font-bold lg:text-5xl">Meet Our Beauty Professionals</h2>
-            <p className="mt-4 text-lg text-forest/75">
+            <p className="mt-4 text-lg text-espresso/75">
               Experienced, certified and passionate about helping you shine
             </p>
           </div>
@@ -244,10 +244,10 @@ export default function AboutPage() {
                     className="aspect-[5/6] w-full object-cover transition-transform group-hover:scale-110" 
                   />
                 </div>
-                <div className="border-t-4 border-gold p-6 text-center bg-gradient-to-b from-white to-ivory">
+                <div className="border-t-4 border-beige p-6 text-center bg-gradient-to-b from-white to-cream">
                   <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="mt-2 text-sm font-semibold text-emerald-deep">{member.role}</p>
-                  <p className="mt-1 text-sm text-forest/60">{member.experience} experience</p>
+                  <p className="mt-2 text-sm font-semibold text-burgundy">{member.role}</p>
+                  <p className="mt-1 text-sm text-espresso/60">{member.experience} experience</p>
                 </div>
               </article>
             ))}
@@ -256,13 +256,13 @@ export default function AboutPage() {
       </section>
 
       {/* Salon Interior */}
-      <section className="section bg-gradient-to-b from-ivory to-emerald-soft/30">
+      <section className="section bg-gradient-to-b from-cream to-blush/30">
         <div className="container-page">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Our Salon</span>
-            <div className="h-1 w-16 bg-gold mt-2 rounded-full mx-auto mb-6" />
+            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Salon</span>
+            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
             <h2 className="text-4xl font-bold lg:text-5xl">Step Inside Star Moon</h2>
-            <p className="mt-4 text-lg text-forest/75">
+            <p className="mt-4 text-lg text-espresso/75">
               Elegant, spacious and spotless — designed for your comfort and relaxation
             </p>
           </div>
@@ -276,8 +276,8 @@ export default function AboutPage() {
                     className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-110" 
                   />
                 </div>
-                <div className="bg-gradient-to-b from-white to-ivory px-4 py-4 text-center">
-                  <p className="font-semibold text-emerald-deep">{photo.alt}</p>
+                <div className="bg-gradient-to-b from-white to-cream px-4 py-4 text-center">
+                  <p className="font-semibold text-burgundy">{photo.alt}</p>
                 </div>
               </div>
             ))}
@@ -290,10 +290,10 @@ export default function AboutPage() {
         <div className="container-page">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-              <span className="text-xs font-bold tracking-[0.25em] text-gold uppercase">Our Commitment</span>
-              <div className="h-1 w-16 bg-gold mt-2 rounded-full mb-6" />
+              <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Commitment</span>
+              <div className="h-1 w-16 bg-beige mt-2 rounded-full mb-6" />
               <h2 className="text-4xl font-bold mb-6">Your Satisfaction Is Our Priority</h2>
-              <p className="text-lg leading-relaxed text-forest/75 mb-8">
+              <p className="text-lg leading-relaxed text-espresso/75 mb-8">
                 We measure our success by how you feel when you leave our salon. That is why we follow strict standards for quality,
                 hygiene and service at every step.
               </p>
@@ -305,21 +305,21 @@ export default function AboutPage() {
                   'Follow-up care advice after every service'
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 shrink-0 text-gold mt-1" aria-hidden />
-                    <span className="text-forest/75">{item}</span>
+                    <Check className="h-5 w-5 shrink-0 text-beige mt-1" aria-hidden />
+                    <span className="text-espresso/75">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="grid gap-6">
               {commitments.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="flex gap-5 rounded-2xl bg-gradient-to-br from-ivory to-white border-2 border-gold/20 p-6 hover:border-gold transition-all hover:shadow-lg">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-deep">
-                    <Icon className="h-6 w-6 text-gold" aria-hidden />
+                <div key={title} className="flex gap-5 rounded-2xl bg-gradient-to-br from-cream to-white border-2 border-beige/20 p-6 hover:border-beige transition-all hover:shadow-lg">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-burgundy">
+                    <Icon className="h-6 w-6 text-beige" aria-hidden />
                   </span>
                   <div>
                     <h3 className="text-lg font-bold mb-2">{title}</h3>
-                    <p className="text-sm leading-relaxed text-forest/75">{description}</p>
+                    <p className="text-sm leading-relaxed text-espresso/75">{description}</p>
                   </div>
                 </div>
               ))}

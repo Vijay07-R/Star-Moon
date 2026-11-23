@@ -32,7 +32,7 @@ export default function Modal({ open, onClose, labelledBy, children, dark = fals
       role="dialog"
       aria-modal="true"
       aria-labelledby={labelledBy}
-      className={`fixed inset-0 z-[60] flex items-center justify-center p-4 ${dark ? 'bg-black/90' : 'bg-forest/70'}`}
+      className={`fixed inset-0 z-[60] flex items-center justify-center p-4 ${dark ? 'bg-black/90' : 'bg-espresso/70'}`}
       onClick={onClose}
     >
       <button

@@ -16,7 +16,7 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="section bg-ivory">
+      <section className="section bg-cream">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center mb-8">
             <h1 className="text-4xl font-semibold sm:text-5xl">Beauty Services</h1>
@@ -26,7 +26,7 @@ export default function ServicesPage() {
             title="Explore Our Services"
           />
           <FilterTabs label="Filter services by category" options={serviceCategories} active={active} onChange={setActive} />
-          <p className="mb-6 text-center text-sm text-forest/60" aria-live="polite">
+          <p className="mb-6 text-center text-sm text-espresso/60" aria-live="polite">
             Showing {visible.length} {visible.length === 1 ? 'service' : 'services'}
           </p>
           <ServiceGrid services={visible} />
