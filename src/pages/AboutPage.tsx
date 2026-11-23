@@ -1,4 +1,5 @@
 import { Award, Check, Eye, ShieldCheck, Sparkles, Target, Users } from 'lucide-react'
+import Certificates from '../components/sections/Certificates'
 import SmartImage from '../components/ui/SmartImage'
 import { photos } from '../data/photos'
 import { commitments, stats } from '../data/team'
@@ -133,6 +134,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <Certificates />
 
       {/* Mission & Vision */}
       <section className="section bg-cream">
