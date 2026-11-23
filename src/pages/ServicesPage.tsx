@@ -1,4 +1,5 @@
 import { useSearchParams } from 'react-router-dom'
+import PriceList from '../components/sections/PriceList'
 import ServiceGrid from '../components/sections/ServiceGrid'
 import FilterTabs from '../components/ui/FilterTabs'
 import SectionHeading from '../components/ui/SectionHeading'
@@ -20,6 +21,9 @@ export default function ServicesPage() {
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center mb-8">
             <h1 className="text-4xl font-semibold sm:text-5xl">Beauty Services</h1>
+            <a href="#price-list" className="mt-4 inline-block text-sm font-semibold text-burgundy underline underline-offset-4 hover:text-burgundy-dark">
+              See full price list
+            </a>
           </div>
           <SectionHeading
             eyebrow="What We Offer"
@@ -32,6 +36,7 @@ export default function ServicesPage() {
           <ServiceGrid services={visible} />
         </div>
       </section>
+      <PriceList />
     </>
   )
 }

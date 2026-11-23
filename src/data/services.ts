@@ -23,7 +23,7 @@ export const services: Service[] = [
     description:
       'From a fresh everyday cut to an elegant updo for a special evening, our stylists study your hair texture, face shape and lifestyle to create a look that is easy to love and easy to maintain.',
     duration: '45 – 90 mins',
-    startingPrice: 600,
+    startingPrice: 200,
     highlights: ['Consultation & face-shape analysis', 'Precision haircut & layering', 'Blow-dry, curls & waves', 'Updos and occasion styling'],
   },
   {
@@ -36,7 +36,7 @@ export const services: Service[] = [
     description:
       'Restore strength and shine with professional treatments using salon-grade products. We offer smoothing, deep conditioning, scalp therapy and global or highlight colouring by trained colourists.',
     duration: '60 – 180 mins',
-    startingPrice: 1500,
+    startingPrice: 1200,
     highlights: ['Keratin & smoothing therapy', 'Deep-conditioning hair spa', 'Global colour & highlights', 'Anti-dandruff scalp treatment'],
   },
   {
@@ -49,7 +49,7 @@ export const services: Service[] = [
     description:
       'Every facial begins with a skin analysis so we can choose the right products for your skin type. Choose from hydrating, brightening, anti-ageing and acne-care facials, plus clean-up and de-tan treatments.',
     duration: '45 – 90 mins',
-    startingPrice: 1200,
+    startingPrice: 500,
     highlights: ['Skin analysis before every facial', 'Hydra & brightening facials', 'Anti-ageing & acne care', 'De-tan and clean-up'],
   },
   {
@@ -62,7 +62,7 @@ export const services: Service[] = [
     description:
       'Our senior bridal artists create timeless looks that photograph beautifully and last from ceremony to reception. Includes a pre-bridal consultation, hairstyling, draping and saree or lehenga setting.',
     duration: '3 – 4 hours',
-    startingPrice: 15000,
+    startingPrice: 8000,
     highlights: ['Trial & look consultation', 'HD or airbrush makeup', 'Bridal hairstyling & accessories', 'Saree / lehenga draping'],
   },
   {
@@ -75,7 +75,7 @@ export const services: Service[] = [
     description:
       'Whether it is a festive gathering, engagement or corporate event, our artists create a polished look that complements your outfit and lasts all evening, using premium international products.',
     duration: '60 – 90 mins',
-    startingPrice: 3000,
+    startingPrice: 3500,
     highlights: ['Soft glam or bold evening looks', 'Premium long-wear products', 'Hairstyling add-on available', 'Lashes included'],
   },
   {
@@ -88,7 +88,7 @@ export const services: Service[] = [
     description:
       'Treat your hands and feet with a soothing soak, exfoliation, cuticle care and massage. Finish with classic polish, long-lasting gel or a delicate nail art design from our curated collection.',
     duration: '45 – 75 mins',
-    startingPrice: 700,
+    startingPrice: 400,
     highlights: ['Classic & spa manicure', 'Pedicure with foot massage', 'Gel polish & extensions', 'Minimal and bridal nail art'],
   },
   {
@@ -114,7 +114,7 @@ export const services: Service[] = [
     description:
       'Reveal soft, even-toned skin with exfoliating scrubs, nourishing body wraps and full-body polishing. We also offer gentle waxing and threading using hygienic, single-use supplies.',
     duration: '30 – 120 mins',
-    startingPrice: 900,
+    startingPrice: 250,
     highlights: ['Full-body polishing', 'Scrubs & nourishing wraps', 'Rica & chocolate waxing', 'Threading & bleach'],
   },
   {
@@ -127,7 +127,7 @@ export const services: Service[] = [
     description:
       'Beauty begins with feeling well. Our wellness rituals combine head and shoulder massage, reflexology and calming skin rituals to reduce stress and help you look and feel your best.',
     duration: '45 – 120 mins',
-    startingPrice: 1500,
+    startingPrice: 500,
     highlights: ['Head, neck & shoulder massage', 'Foot reflexology', 'Stress-relief rituals', 'Personalised self-care plans'],
   },
 ]

@@ -32,6 +32,20 @@ export interface Treatment {
   price: number
 }
 
+export interface PriceItem {
+  name: string
+  /** Display string, e.g. '₹500', '₹3,500 – ₹5,000' */
+  price: string
+  note?: string
+}
+
+export interface PriceCategory {
+  id: string
+  title: string
+  items: PriceItem[]
+  footnote?: string
+}
+
 export type PackageCategory = 'bridal' | 'hair' | 'skincare' | 'facial' | 'combo' | 'seasonal'
 
 export interface BeautyPackage {
