@@ -1,5 +1,4 @@
 import { CalendarCheck, Phone } from 'lucide-react'
-import { img } from '../../data/images'
 import { siteInfo } from '../../data/site'
 import { ButtonLink } from '../ui/Button'
 
@@ -18,13 +17,6 @@ export default function CtaBanner({
     <section className={`section ${background === 'white' ? 'bg-white' : 'bg-cream'}`}>
       <div className="container-page">
         <div className="relative overflow-hidden rounded-2xl bg-burgundy">
-          <img
-            src={img('1560066984-138dadb4c035', 1600)}
-            alt=""
-            aria-hidden
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover opacity-15"
-          />
           <div className="relative flex flex-col items-center gap-6 px-6 py-14 text-center md:px-16 md:py-16">
             <p className="text-xs font-semibold tracking-[0.25em] text-beige uppercase">Book an Appointment</p>
             <h2 className="max-w-2xl text-3xl font-semibold text-white md:text-4xl">{title}</h2>

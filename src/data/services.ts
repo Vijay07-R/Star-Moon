@@ -1,6 +1,5 @@
 import { Bath, Flower2, Hand, HeartPulse, Leaf, Palette, Scissors, Sparkles, Wand2 } from 'lucide-react'
 import type { FilterOption, Service, ServiceCategory, Treatment } from '../types'
-import { img } from './images'
 
 export const serviceCategories: FilterOption<ServiceCategory>[] = [
   { value: 'all', label: 'All Services' },
@@ -17,7 +16,6 @@ export const services: Service[] = [
     id: 'hair-styling',
     name: 'Hair Styling',
     category: 'hair',
-    image: img('1562322140-8baeececf3df'),
     icon: Scissors,
     shortDescription: 'Precision cuts, blow-dries and occasion styling tailored to your face shape.',
     description:
@@ -30,7 +28,6 @@ export const services: Service[] = [
     id: 'hair-treatments',
     name: 'Hair Treatments',
     category: 'hair',
-    image: img('1560869713-7d0a29430803'),
     icon: Sparkles,
     shortDescription: 'Keratin, hair spa and colour treatments for healthy, glossy hair.',
     description:
@@ -43,7 +40,6 @@ export const services: Service[] = [
     id: 'facial-skin-care',
     name: 'Facial & Skin Care',
     category: 'skin',
-    image: img('1570172619644-dfd03ed5d881'),
     icon: Flower2,
     shortDescription: 'Customised facials and skin therapies for a clear, radiant complexion.',
     description:
@@ -56,7 +52,6 @@ export const services: Service[] = [
     id: 'bridal-makeup',
     name: 'Bridal Makeup',
     category: 'makeup',
-    image: img('1519741497674-611481863552'),
     icon: Wand2,
     shortDescription: 'Long-lasting HD and airbrush bridal looks for your most special day.',
     description:
@@ -69,7 +64,6 @@ export const services: Service[] = [
     id: 'party-makeup',
     name: 'Party Makeup',
     category: 'makeup',
-    image: img('1487412947147-5cebf100ffc2'),
     icon: Palette,
     shortDescription: 'Soft glam to bold evening looks for receptions, parties and events.',
     description:
@@ -82,7 +76,6 @@ export const services: Service[] = [
     id: 'manicure-pedicure',
     name: 'Manicure & Pedicure',
     category: 'nails',
-    image: img('1604654894610-df63bc536371'),
     icon: Hand,
     shortDescription: 'Relaxing hand and foot care with gel polish and elegant nail art.',
     description:
@@ -95,7 +88,6 @@ export const services: Service[] = [
     id: 'spa-treatments',
     name: 'Spa Treatments',
     category: 'spa',
-    image: img('1544161515-4ab6ce6db874'),
     icon: Leaf,
     shortDescription: 'Aromatherapy and therapeutic massages to relax body and mind.',
     description:
@@ -108,7 +100,6 @@ export const services: Service[] = [
     id: 'body-care',
     name: 'Body Care',
     category: 'spa',
-    image: img('1540555700478-4be289fbecef'),
     icon: Bath,
     shortDescription: 'Body polishing, scrubs, wraps and waxing for smooth, glowing skin.',
     description:
@@ -121,7 +112,6 @@ export const services: Service[] = [
     id: 'beauty-wellness',
     name: 'Beauty & Wellness',
     category: 'wellness',
-    image: img('1515377905703-c4788e51af15'),
     icon: HeartPulse,
     shortDescription: 'Holistic rituals, head massages and self-care programmes for total well-being.',
     description:

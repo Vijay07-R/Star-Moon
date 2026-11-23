@@ -16,7 +16,6 @@ export interface Service {
   id: string
   name: string
   category: ServiceCategory
-  image: string
   shortDescription: string
   description: string
   duration: string
@@ -60,17 +59,7 @@ export interface BeautyPackage {
   tag?: string
 }
 
-export interface Testimonial {
-  id: number
-  name: string
-  photo: string
-  rating: number
-  service: string
-  review: string
-  date: string
-}
-
-export type GalleryCategory = 'bridal' | 'hair' | 'skincare' | 'interior' | 'transformations'
+export type GalleryCategory = 'bridal' | 'hair' | 'transformations'
 
 export interface GalleryImage {
   id: number
@@ -79,13 +68,6 @@ export interface GalleryImage {
   category: GalleryCategory
   /** CSS object-position for the square thumbnail crop, e.g. '50% 20%' to keep faces in frame */
   position?: string
-}
-
-export interface TeamMember {
-  name: string
-  role: string
-  experience: string
-  photo: string
 }
 
 export interface Feature {

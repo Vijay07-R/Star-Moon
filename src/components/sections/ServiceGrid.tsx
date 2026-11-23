@@ -5,7 +5,6 @@ import type { Service } from '../../types'
 import { bookingLink } from '../../utils/booking'
 import { ButtonLink } from '../ui/Button'
 import Modal from '../ui/Modal'
-import SmartImage from '../ui/SmartImage'
 import ServiceCard from './ServiceCard'
 
 /** Grid of service cards with a shared "View Details" dialog. */
@@ -24,11 +23,10 @@ export default function ServiceGrid({ services }: { services: Service[] }) {
         open={selected !== null}
         onClose={() => setSelected(null)}
         labelledBy="service-dialog-title"
-        className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-xl bg-white shadow-2xl"
+        className="max-h-[90vh] w-full max-w-xl overflow-y-auto rounded-xl bg-white shadow-2xl"
       >
         {selected && (
-          <div className="grid md:grid-cols-2">
-            <SmartImage src={selected.image} alt={selected.name} className="h-56 w-full object-cover md:h-full" />
+          <div>
             <div className="p-6 md:p-8">
               <p className="text-xs font-semibold tracking-[0.25em] text-beige-dark uppercase">Service Details</p>
               <h3 id="service-dialog-title" className="mt-2 text-2xl font-semibold">

@@ -6,14 +6,14 @@ import WhyChooseUs from '../components/sections/WhyChooseUs'
 import { ButtonLink } from '../components/ui/Button'
 import SmartImage from '../components/ui/SmartImage'
 import { galleryImages } from '../data/gallery'
-import { img } from '../data/images'
+import { photos } from '../data/photos'
 import { services } from '../data/services'
 import { stats } from '../data/team'
 
 const featuredServices = services.filter((s) =>
   ['hair-styling', 'facial-skin-care', 'bridal-makeup', 'manicure-pedicure', 'spa-treatments', 'hair-treatments'].includes(s.id),
 )
-const galleryPreview = [1, 3, 4, 2, 5, 7].map((id) => galleryImages.find((g) => g.id === id)!)
+const galleryPreview = galleryImages
 
 const academyHighlights = [
   { icon: Award, title: 'Industry-Recognized Certification', text: 'Get certified and boost your career' },
@@ -67,8 +67,9 @@ export default function HomePage() {
             <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/40 hidden sm:block" aria-hidden />
             <div className="absolute -bottom-6 -left-6 h-full w-full rounded-3xl bg-burgundy/10 hidden sm:block" aria-hidden />
             <SmartImage
-              src={img('1487412947147-5cebf100ffc2', 1100, 1300)}
-              alt="Beauty model with flawless professional makeup"
+              src={photos.bridalLehenga}
+              alt="Bride in an orange lehenga, makeup and hair by Star Moon"
+              style={{ objectPosition: '50% 25%' }}
               loading="eager"
               className="relative aspect-[5/6] w-full rounded-3xl object-cover shadow-2xl ring-4 ring-white"
             />
@@ -81,13 +82,14 @@ export default function HomePage() {
         <div className="container-page grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="grid grid-cols-2 gap-4">
             <SmartImage 
-              src={img('1560066984-138dadb4c035', 700, 900)} 
-              alt="Star Moon salon interior" 
+              src={photos.receptionLook}
+              alt="Soft glam reception makeup by Star Moon"
+              style={{ objectPosition: '50% 15%' }} 
               className="aspect-[3/4] w-full rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow" 
             />
             <SmartImage 
-              src={img('1522337360788-8b13dee7a37e', 700, 900)} 
-              alt="Stylist styling a client's hair" 
+              src={photos.jewelledBraid}
+              alt="Jewelled braid hairstyle by Star Moon" 
               className="mt-10 aspect-[3/4] w-full rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow" 
             />
           </div>
@@ -154,7 +156,7 @@ export default function HomePage() {
             <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Gallery</span>
             <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto" />
             <h2 className="mt-6 text-4xl font-bold lg:text-5xl">A Glimpse of Our Work</h2>
-            <p className="mt-4 text-lg text-espresso/75">Bridal looks, transformations, and salon spaces</p>
+            <p className="mt-4 text-lg text-espresso/75">Bridal looks, hairstyles and transformations by our team</p>
           </div>
           <GalleryGrid images={galleryPreview} />
           <div className="mt-12 text-center">

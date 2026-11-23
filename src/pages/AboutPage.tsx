@@ -1,24 +1,7 @@
 import { Award, Check, Eye, ShieldCheck, Sparkles, Target, Users } from 'lucide-react'
 import SmartImage from '../components/ui/SmartImage'
-import { img } from '../data/images'
-import { commitments, stats, team } from '../data/team'
-
-const interiorPhotos = [
-  { src: img('1560066984-138dadb4c035', 900, 700), alt: 'Main styling lounge' },
-  { src: img('1600948836101-f9ffda59d250', 900, 700), alt: 'Reception and waiting area' },
-  { src: img('1521590832167-7bcbfaa6381f', 900, 700), alt: 'Hair styling stations' },
-  { src: img('1633681926022-84c23e8cb2d6', 900, 700), alt: 'Private treatment suite' },
-]
-
-// Professional Certificates
-const certificates = [
-  { id: 1, image: img('1487412947147-5cebf100ffc2', 600, 800), title: 'Professional Beauty Certification', year: '2014' },
-  { id: 2, image: img('1522337360788-8b13dee7a37e', 600, 800), title: 'Bridal Makeup Specialist', year: '2016' },
-  { id: 3, image: img('1560066984-138dadb4c035', 600, 800), title: 'Advanced Hair Styling', year: '2017' },
-  { id: 4, image: img('1512496015851-a90fb38ba796', 600, 800), title: 'Skin Care Specialist', year: '2018' },
-  { id: 5, image: img('1570172619644-dfd03ed5d881', 600, 800), title: 'Spa & Wellness Therapy', year: '2019' },
-  { id: 6, image: img('1516975080664-ed2fc6a32937', 600, 800), title: 'Business Excellence Award', year: '2022' },
-]
+import { photos } from '../data/photos'
+import { commitments, stats } from '../data/team'
 
 const expertiseAreas = [
   { icon: Sparkles, title: 'Hair Styling & Treatments', description: 'Expert cutting, coloring, styling and hair care treatments' },
@@ -47,8 +30,9 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/30 hidden sm:block" aria-hidden />
               <SmartImage 
-                src={img('1522337360788-8b13dee7a37e', 1000, 1100)} 
-                alt="Stylist with a client at Star Moon" 
+                src={photos.sareeLook}
+                alt="Our stylist with a client in a silk saree look"
+                style={{ objectPosition: '50% 20%' }} 
                 className="relative aspect-[10/11] w-full rounded-3xl object-cover shadow-2xl" 
               />
               <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-2xl">
@@ -121,12 +105,11 @@ export default function AboutPage() {
                 <h3 className="text-3xl font-bold mb-6">From a Small Studio to a Trusted Name</h3>
                 <div className="space-y-4 leading-relaxed text-espresso/75">
                   <p>
-                    Star Moon began in 2014 as a two-chair studio founded by Shalini Varma, a makeup artist with a dream of creating a salon
-                    where women felt truly comfortable and confident.
+                    Star Moon began in 2014 as a small studio with a simple dream: a salon where women feel truly comfortable and
+                    confident.
                   </p>
                   <p>
-                    Word spread through happy brides and loyal regulars. Today, our team of more than 25 beauty experts serves thousands
-                    of clients each year — but we still treat every guest the way we did on our very first day: personally and with care.
+                    Word spread through happy brides and loyal regulars. Today we serve many clients every year, but we still treat every guest the way we did on our very first day: personally and with care.
                   </p>
                   <p>
                     We continue to train with leading brands and stay current with the latest techniques, so you always receive the best.
@@ -135,62 +118,18 @@ export default function AboutPage() {
               </div>
               <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
                 <SmartImage 
-                  src={img('1512496015851-a90fb38ba796', 700, 900)} 
-                  alt="Professional makeup products" 
+                  src={photos.bridalFlowerJadai}
+                  alt="Traditional bridal flower jadai" 
                   className="aspect-[3/4] w-full rounded-2xl object-cover shadow-lg" 
                 />
                 <SmartImage 
-                  src={img('1570172619644-dfd03ed5d881', 700, 900)} 
-                  alt="Client enjoying a facial" 
+                  src={photos.receptionLook}
+                  alt="Soft reception glam makeup"
+                  style={{ objectPosition: '50% 15%' }} 
                   className="mt-10 aspect-[3/4] w-full rounded-2xl object-cover shadow-lg" 
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certificates & Qualifications */}
-      <section className="section bg-white">
-        <div className="container-page">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Certified Excellence</span>
-            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
-            <h2 className="text-4xl font-bold lg:text-5xl">Professional Certifications & Qualifications</h2>
-            <p className="mt-4 text-lg text-espresso/75">
-              Our team holds industry-recognized certifications and continuously updates their skills
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {certificates.map((cert) => (
-              <div 
-                key={cert.id} 
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white to-cream shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
-              >
-                <div className="relative overflow-hidden aspect-[3/4]">
-                  <SmartImage 
-                    src={cert.image} 
-                    alt={cert.title}
-                    className="w-full h-full object-cover transition-transform group-hover:scale-110" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
-                    <div className="text-center text-white">
-                      <Award className="h-12 w-12 mx-auto mb-3" />
-                      <p className="font-bold text-lg">View Certificate</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6 bg-white">
-                  <h3 className="font-bold text-lg mb-2">{cert.title}</h3>
-                  <p className="text-sm text-espresso/60">Certified {cert.year}</p>
-                </div>
-                <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-white/95 backdrop-blur-sm px-3 py-1.5 shadow-lg">
-                  <Award className="h-4 w-4 text-beige" />
-                  <span className="text-xs font-bold text-burgundy">Certified</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -217,68 +156,6 @@ export default function AboutPage() {
                 </div>
                 <h2 className="text-3xl font-bold mb-4">{title}</h2>
                 <p className="text-lg leading-relaxed text-espresso/75">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="section bg-white">
-        <div className="container-page">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Team</span>
-            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
-            <h2 className="text-4xl font-bold lg:text-5xl">Meet Our Beauty Professionals</h2>
-            <p className="mt-4 text-lg text-espresso/75">
-              Experienced, certified and passionate about helping you shine
-            </p>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member) => (
-              <article key={member.name} className="group overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
-                <div className="relative overflow-hidden">
-                  <SmartImage 
-                    src={member.photo} 
-                    alt={member.name} 
-                    className="aspect-[5/6] w-full object-cover transition-transform group-hover:scale-110" 
-                  />
-                </div>
-                <div className="border-t-4 border-beige p-6 text-center bg-gradient-to-b from-white to-cream">
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="mt-2 text-sm font-semibold text-burgundy">{member.role}</p>
-                  <p className="mt-1 text-sm text-espresso/60">{member.experience} experience</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Salon Interior */}
-      <section className="section bg-gradient-to-b from-cream to-blush/30">
-        <div className="container-page">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Our Salon</span>
-            <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
-            <h2 className="text-4xl font-bold lg:text-5xl">Step Inside Star Moon</h2>
-            <p className="mt-4 text-lg text-espresso/75">
-              Elegant, spacious and spotless — designed for your comfort and relaxation
-            </p>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {interiorPhotos.map((photo) => (
-              <div key={photo.alt} className="group overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
-                <div className="relative overflow-hidden">
-                  <SmartImage 
-                    src={photo.src} 
-                    alt={photo.alt} 
-                    className="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-110" 
-                  />
-                </div>
-                <div className="bg-gradient-to-b from-white to-cream px-4 py-4 text-center">
-                  <p className="font-semibold text-burgundy">{photo.alt}</p>
-                </div>
               </div>
             ))}
           </div>

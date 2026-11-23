@@ -1,13 +1,5 @@
 import { Award, Gem, HeartHandshake, ShieldCheck, Sparkles, Users } from 'lucide-react'
-import type { Feature, TeamMember } from '../types'
-import { img } from './images'
-
-export const team: TeamMember[] = [
-  { name: 'Shalini Varma', role: 'Founder & Creative Director', experience: '15+ years', photo: img('1580489944761-15a19d654956', 600, 720) },
-  { name: 'Nithya Rajan', role: 'Senior Bridal Makeup Artist', experience: '10+ years', photo: img('1573496359142-b8d87734a5a2', 600, 720) },
-  { name: 'Aishwarya Menon', role: 'Hair Stylist & Colourist', experience: '8+ years', photo: img('1534528741775-53994a69daeb', 600, 720) },
-  { name: 'Deepa Kannan', role: 'Skin & Spa Therapist', experience: '9+ years', photo: img('1544005313-94ddf0286df2', 600, 720) },
-]
+import type { Feature } from '../types'
 
 export const whyChooseUs: Feature[] = [
   { icon: Award, title: 'Certified Experts', description: 'Trained stylists, artists and therapists with years of salon experience.' },
