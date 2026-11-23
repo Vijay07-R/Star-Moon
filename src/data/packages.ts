@@ -1,0 +1,112 @@
+import type { BeautyPackage, FilterOption, PackageCategory } from '../types'
+
+export const packageCategories: FilterOption<PackageCategory>[] = [
+  { value: 'all', label: 'All Packages' },
+  { value: 'bridal', label: 'Bridal' },
+  { value: 'hair', label: 'Hair Care' },
+  { value: 'skincare', label: 'Skincare' },
+  { value: 'facial', label: 'Facial' },
+  { value: 'combo', label: 'Combo' },
+  { value: 'seasonal', label: 'Seasonal Offers' },
+]
+
+export const packages: BeautyPackage[] = [
+  {
+    id: 'royal-bridal',
+    name: 'Royal Bridal Package',
+    category: 'bridal',
+    originalPrice: 35000,
+    offerPrice: 28999,
+    duration: 'Wedding day + 3 pre-bridal sessions',
+    tag: 'Most Popular',
+    description: 'A complete bridal experience from pre-wedding glow to your big-day look.',
+    includes: ['HD bridal makeup & hairstyling', 'Saree / lehenga draping', '2 pre-bridal facials', 'Full-body polishing', 'Bridal manicure & pedicure'],
+  },
+  {
+    id: 'engagement-glow',
+    name: 'Engagement Glow Package',
+    category: 'bridal',
+    originalPrice: 14000,
+    offerPrice: 10999,
+    duration: 'Event day + 1 prep session',
+    description: 'Elegant makeup and pre-event skin prep for engagements and receptions.',
+    includes: ['Party HD makeup & hairstyling', 'Gold facial (prep session)', 'Gel manicure', 'Eyelash application'],
+  },
+  {
+    id: 'hair-revival',
+    name: 'Hair Revival Package',
+    category: 'hair',
+    originalPrice: 6500,
+    offerPrice: 4999,
+    duration: '3 hours',
+    description: 'Repair damaged, dull hair and leave with a fresh, polished style.',
+    includes: ['Keratin smoothing treatment', 'Deep-conditioning hair spa', 'Precision haircut', 'Blow-dry styling'],
+  },
+  {
+    id: 'healthy-scalp',
+    name: 'Healthy Scalp Ritual',
+    category: 'hair',
+    originalPrice: 3200,
+    offerPrice: 2499,
+    duration: '90 mins',
+    description: 'A soothing scalp detox to reduce dandruff and support healthy growth.',
+    includes: ['Scalp analysis', 'Anti-dandruff treatment', 'Head & shoulder massage', 'Nourishing hair mask'],
+  },
+  {
+    id: 'radiant-skin',
+    name: 'Radiant Skin Programme',
+    category: 'skincare',
+    originalPrice: 9000,
+    offerPrice: 6999,
+    duration: '3 sessions over 6 weeks',
+    description: 'A guided course of treatments for visibly clearer, brighter skin.',
+    includes: ['Skin analysis & consultation', '3 customised facials', 'De-tan treatment', 'Home-care product guidance'],
+  },
+  {
+    id: 'hydra-facial',
+    name: 'Signature Hydra Facial',
+    category: 'facial',
+    originalPrice: 3500,
+    offerPrice: 2699,
+    duration: '75 mins',
+    description: 'Deep cleansing, exfoliation and intense hydration for instant glow.',
+    includes: ['Deep cleansing & exfoliation', 'Hydrating serum infusion', 'Face & neck massage', 'Brightening sheet mask'],
+  },
+  {
+    id: 'pamper-day',
+    name: 'Pamper Day Combo',
+    category: 'combo',
+    originalPrice: 7500,
+    offerPrice: 5499,
+    duration: '4 hours',
+    tag: 'Best Value',
+    description: 'A full day of self-care covering hair, skin, hands and feet.',
+    includes: ['Aromatherapy massage (60 mins)', 'Fruit facial', 'Hair spa', 'Spa manicure & pedicure'],
+  },
+  {
+    id: 'festive-glow',
+    name: 'Festive Season Glow',
+    category: 'seasonal',
+    originalPrice: 5200,
+    offerPrice: 3499,
+    duration: '2.5 hours',
+    tag: 'Limited Time',
+    description: 'Look your best this festive season with our limited-time glow-up offer.',
+    includes: ['Gold radiance facial', 'Blow-dry styling', 'Gel manicure', 'Eyebrow threading'],
+  },
+  {
+    id: 'monsoon-care',
+    name: 'Monsoon Hair & Skin Care',
+    category: 'seasonal',
+    originalPrice: 4200,
+    offerPrice: 2999,
+    duration: '2 hours',
+    description: 'Combat humidity frizz and dull skin with this seasonal care duo.',
+    includes: ['Anti-frizz hair treatment', 'Clean-up facial', 'Pedicure with foot soak'],
+  },
+]
+
+export const getDiscount = (pkg: BeautyPackage): number =>
+  Math.round(((pkg.originalPrice - pkg.offerPrice) / pkg.originalPrice) * 100)
+
+export const getPackageById = (id: string): BeautyPackage | undefined => packages.find((p) => p.id === id)
