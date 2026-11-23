@@ -1,7 +1,5 @@
 import { Award, BookOpen, Calendar, Check, Clock, GraduationCap, Users, Star } from 'lucide-react'
 import { ButtonLink } from '../components/ui/Button'
-import SmartImage from '../components/ui/SmartImage'
-import { photos } from '../data/photos'
 import { siteInfo } from '../data/site'
 
 const courses = [
@@ -101,8 +99,8 @@ export default function AcademyPage() {
 
       {/* Introduction */}
       <section className="section bg-white">
-        <div className="container-page grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
+        <div className="container-page">
+          <div className="mx-auto max-w-4xl">
             <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Professional Training</span>
             <div className="h-1 w-16 bg-beige mt-2 rounded-full" />
             <h2 className="mt-6 text-4xl font-bold lg:text-5xl">Transform Your Passion into a Profession</h2>
@@ -114,7 +112,7 @@ export default function AcademyPage() {
               Whether you want to start your own salon, work as a freelance artist, or join an established beauty brand, our
               certified courses will equip you with the technical skills and business knowledge you need to succeed.
             </p>
-            <ul className="mt-8 space-y-3">
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {features.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <Check className="h-5 w-5 shrink-0 text-beige mt-0.5" aria-hidden /> 
@@ -122,26 +120,6 @@ export default function AcademyPage() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="relative">
-            <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/30 hidden sm:block" aria-hidden />
-            <SmartImage
-              src={photos.sareeLook}
-              alt="Star Moon stylist with a client"
-              style={{ objectPosition: '50% 20%' }}
-              className="relative aspect-[10/11] w-full rounded-3xl object-cover shadow-2xl"
-            />
-            <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-2xl max-w-xs">
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-burgundy">
-                  <GraduationCap className="h-6 w-6 text-beige" />
-                </div>
-                <div>
-                  <p className="font-serif text-3xl font-bold text-burgundy">500+</p>
-                  <p className="text-sm text-espresso/70">Students Trained</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

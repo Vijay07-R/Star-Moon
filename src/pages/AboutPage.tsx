@@ -27,28 +27,10 @@ export default function AboutPage() {
       {/* Brand Introduction */}
       <section className="section bg-white">
         <div className="container-page">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="relative">
-              <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/30 hidden sm:block" aria-hidden />
-              <SmartImage 
-                src={photos.sareeLook}
-                alt="Our stylist with a client in a silk saree look"
-                style={{ objectPosition: '50% 20%' }} 
-                className="relative aspect-[10/11] w-full rounded-3xl object-cover shadow-2xl" 
-              />
-              <div className="absolute -bottom-6 -left-6 rounded-2xl bg-white p-6 shadow-2xl">
-                <div className="flex items-center gap-3">
-                  <Award className="h-10 w-10 text-beige" />
-                  <div>
-                    <p className="font-serif text-3xl font-bold text-burgundy">Since 2014</p>
-                    <p className="text-sm text-espresso/70">Serving women with care</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="mx-auto max-w-4xl text-center">
             <div>
               <span className="text-xs font-bold tracking-[0.25em] text-beige uppercase">Welcome to Star Moon</span>
-              <div className="h-1 w-16 bg-beige mt-2 rounded-full mb-6" />
+              <div className="mx-auto h-1 w-16 bg-beige mt-2 rounded-full mb-6" />
               <h2 className="text-4xl font-bold lg:text-5xl mb-6">Where Beauty Meets Comfort & Care</h2>
               <div className="space-y-4 leading-relaxed text-espresso/80 text-lg">
                 <p>
