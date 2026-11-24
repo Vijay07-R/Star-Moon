@@ -51,6 +51,7 @@ export default function ContactPage() {
             {contactCards.map(({ icon: Icon, title, info, action, href }) => (
               <div
                 key={title}
+                data-tilt
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1"
               >
                 <div className="p-8 text-center">

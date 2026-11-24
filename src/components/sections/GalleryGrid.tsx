@@ -34,6 +34,7 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
         {images.map((image, i) => (
           <button
             key={image.id}
+            data-tilt
             type="button"
             onClick={() => setIndex(i)}
             className="group relative aspect-square overflow-hidden rounded-lg bg-blush focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-beige"

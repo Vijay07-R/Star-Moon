@@ -135,7 +135,7 @@ export default function AcademyPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
-              <article key={course.id} className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1">
+              <article key={course.id} data-tilt className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1">
                 {course.popular && (
                   <div className="absolute top-4 right-4 z-10 flex items-center gap-1 rounded-full bg-beige px-3 py-1 text-xs font-bold text-white">
                     <Star className="h-3 w-3" /> Popular
@@ -188,7 +188,7 @@ export default function AcademyPage() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="group rounded-2xl border-2 border-beige/20 bg-gradient-to-br from-cream to-white p-8 text-center transition-all hover:border-beige hover:shadow-xl">
+              <div key={title} data-tilt className="group rounded-2xl border-2 border-beige/20 bg-gradient-to-br from-cream to-white p-8 text-center transition-all hover:border-beige hover:shadow-xl">
                 <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-burgundy mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="h-8 w-8 text-beige" aria-hidden />
                 </div>

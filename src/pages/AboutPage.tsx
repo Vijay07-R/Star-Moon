@@ -70,7 +70,7 @@ export default function AboutPage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
             {expertiseAreas.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
+              <div key={title} data-tilt className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
                 <div className="inline-flex items-center justify-center h-14 w-14 rounded-full bg-burgundy mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="h-7 w-7 text-beige" aria-hidden />
                 </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                 text: 'To be the most trusted women\'s beauty destination, known for skilled artistry, honest advice and an experience that clients look forward to.',
               },
             ].map(({ icon: Icon, title, text }) => (
-              <div key={title} className="group rounded-2xl border-2 border-beige/30 bg-white p-10 hover:border-beige transition-all hover:shadow-xl">
+              <div key={title} data-tilt className="group rounded-2xl border-2 border-beige/30 bg-white p-10 hover:border-beige transition-all hover:shadow-xl">
                 <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-burgundy mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="h-8 w-8 text-beige" aria-hidden />
                 </div>
@@ -175,7 +175,7 @@ export default function AboutPage() {
             </div>
             <div className="grid gap-6">
               {commitments.map(({ icon: Icon, title, description }) => (
-                <div key={title} className="flex gap-5 rounded-2xl bg-gradient-to-br from-cream to-white border-2 border-beige/20 p-6 hover:border-beige transition-all hover:shadow-lg">
+                <div key={title} data-tilt className="flex gap-5 rounded-2xl bg-gradient-to-br from-cream to-white border-2 border-beige/20 p-6 hover:border-beige transition-all hover:shadow-lg">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-burgundy">
                     <Icon className="h-6 w-6 text-beige" aria-hidden />
                   </span>

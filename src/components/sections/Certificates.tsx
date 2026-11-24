@@ -19,7 +19,7 @@ export default function Certificates() {
 
         <div className="mx-auto grid max-w-5xl gap-10">
           {certificates.map((cert) => (
-            <article key={cert.id} className="grid items-center gap-8 rounded-3xl bg-gradient-to-br from-cream to-blush/40 p-6 shadow-lg md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:p-10">
+            <article key={cert.id} data-tilt className="grid items-center gap-8 rounded-3xl bg-gradient-to-br from-cream to-blush/40 p-6 shadow-lg md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:p-10">
               <button
                 type="button"
                 onClick={() => setOpen(cert)}

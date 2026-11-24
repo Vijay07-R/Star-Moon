@@ -64,15 +64,18 @@ export default function HomePage() {
           </div>
 
           <div className="anim-fade-up [--delay:200ms] relative mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/40 hidden sm:block" aria-hidden />
-            <div className="absolute -bottom-6 -left-6 h-full w-full rounded-3xl bg-burgundy/10 hidden sm:block" aria-hidden />
+            {/* 3D layers: the frames sit behind the photo, so they shift against it as it tilts */}
+            <div data-tilt="hero" className="relative [transform-style:preserve-3d]">
+            <div className="absolute -top-6 -right-6 h-full w-full rounded-3xl border-4 border-beige/40 hidden sm:block [translate:0_0_-20px]" aria-hidden />
+            <div className="absolute -bottom-6 -left-6 h-full w-full rounded-3xl bg-burgundy/10 hidden sm:block [translate:0_0_-40px]" aria-hidden />
             <SmartImage
               src={photos.bridalLehenga}
               alt="Bride in an orange lehenga, makeup and hair by Star Moon"
               style={{ objectPosition: '50% 25%' }}
               loading="eager"
-              className="anim-float relative aspect-[5/6] w-full rounded-3xl object-cover shadow-2xl ring-4 ring-white"
+              className="anim-float relative aspect-[5/6] w-full rounded-3xl object-cover shadow-2xl ring-4 ring-white [translate:0_0_30px]"
             />
+            </div>
           </div>
         </div>
       </section>
@@ -180,7 +183,7 @@ export default function HomePage() {
           
           <div className="grid gap-8 md:grid-cols-3 mb-12">
             {academyHighlights.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center hover:bg-white/15 transition-colors">
+              <div key={title} data-tilt className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-center hover:bg-white/15 transition-colors">
                 <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-beige/20 mb-6">
                   <Icon className="h-8 w-8 text-beige" aria-hidden />
                 </div>

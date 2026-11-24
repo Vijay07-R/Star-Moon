@@ -9,6 +9,7 @@ export default function PackageCard({ pkg }: { pkg: BeautyPackage }) {
   const featured = Boolean(pkg.tag)
   return (
     <article
+      data-tilt
       className={`relative flex flex-col rounded-xl border bg-white p-7 shadow-sm transition-shadow hover:shadow-lg ${
         featured ? 'border-beige' : 'border-espresso/10'
       }`}

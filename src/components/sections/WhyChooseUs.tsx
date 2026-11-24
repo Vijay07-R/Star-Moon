@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {whyChooseUs.map(({ icon: Icon, title, description }) => (
-            <div key={title} className="rounded-xl border border-white/10 bg-white/5 p-7 text-center">
+            <div key={title} data-tilt className="rounded-xl border border-white/10 bg-white/5 p-7 text-center">
               <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-beige/50">
                 <Icon className="h-6 w-6 text-beige" aria-hidden />
               </span>

@@ -12,7 +12,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ service, onViewDetails }: ServiceCardProps) {
   const Icon = service.icon
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-espresso/10 bg-white shadow-sm transition-shadow hover:shadow-lg">
+    <article data-tilt className="group flex flex-col overflow-hidden rounded-xl border border-espresso/10 bg-white shadow-sm transition-shadow hover:shadow-lg">
       <div className="flex items-center gap-4 border-b border-beige/40 bg-gradient-to-br from-cream to-blush px-6 py-5">
         <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-burgundy">
           <Icon className="h-5 w-5 text-beige" aria-hidden />
