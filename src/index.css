@@ -102,6 +102,71 @@
   .anim-pulse-ring {
     animation: pulse-ring 2.6s ease-out infinite;
   }
+  .anim-blur-in {
+    animation: blur-in 0.9s cubic-bezier(0.2, 0.65, 0.3, 1) both;
+    animation-delay: var(--delay, 0ms);
+  }
+  .anim-breathe {
+    animation: breathe 9s ease-in-out infinite alternate;
+  }
+  .anim-focus {
+    animation: focus 2.8s ease-in-out infinite;
+  }
+  .anim-scroll-hint {
+    animation: scroll-hint 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes blur-in {
+  from {
+    opacity: 0;
+    filter: blur(12px);
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+@keyframes breathe {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.035) translateY(-0.6%);
+  }
+}
+
+@keyframes focus {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(0.88);
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-hint {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
 }
 
 @keyframes fade-up {
