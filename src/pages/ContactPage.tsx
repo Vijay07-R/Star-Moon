@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import AppointmentForm from '../components/forms/AppointmentForm'
 import { InstagramIcon } from '../components/ui/SocialIcons'
 import { siteInfo } from '../data/site'
+import { BlurInText } from '../components/story/Words'
 
 const contactCards = [
   { 
@@ -38,7 +39,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3MnYxNkgzNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
         <div className="container-page relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white sm:text-6xl">Contact Us</h1>
+            <BlurInText as="h1" text="Contact Us" className="text-5xl font-bold text-white sm:text-6xl" />
             <p className="mt-4 text-xl text-white/90">We'd love to hear from you</p>
           </div>
         </div>

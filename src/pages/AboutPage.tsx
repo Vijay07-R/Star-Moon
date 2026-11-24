@@ -3,6 +3,9 @@ import Certificates from '../components/sections/Certificates'
 import SmartImage from '../components/ui/SmartImage'
 import { photos } from '../data/photos'
 import { commitments, stats } from '../data/team'
+import { BlurInText } from '../components/story/Words'
+import FillStatement from '../components/story/FillStatement'
+import PhotoStory from '../components/story/PhotoStory'
 
 const expertiseAreas = [
   { icon: Sparkles, title: 'Hair Styling & Treatments', description: 'Expert cutting, coloring, styling and hair care treatments' },
@@ -19,7 +22,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGg3MnYxNkgzNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
         <div className="container-page relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white sm:text-6xl">About Us</h1>
+            <BlurInText as="h1" text="About Us" className="text-5xl font-bold text-white sm:text-6xl" />
           </div>
         </div>
       </section>
@@ -55,6 +58,33 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Scroll story: our bridal hair work */}
+      <PhotoStory
+        src={photos.bridalFlowerJadai}
+        alt="Traditional bridal flower jadai made at Star Moon"
+        aspect={1200 / 1600}
+        from={{ x: 0.48, y: 0.45, zoom: 1.05 }}
+        to={{ x: 0.48, y: 0.3, zoom: 1.9 }}
+        points={[
+          { x: 0.46, y: 0.12, label: 'Flower Bun' },
+          { x: 0.49, y: 0.27, label: 'Jasmine Rings' },
+          { x: 0.5, y: 0.44, label: 'Rose Hearts' },
+        ]}
+        eyebrow="Made by Hand"
+        title="Traditional Craft"
+        text="Fresh jasmine and roses, set strand by strand into a bridal jadai that lasts the whole ceremony."
+        title2="Your Story, Styled"
+        text2="Every bride is different, so every jadai, bun and braid is planned around you."
+      />
+
+      <FillStatement
+        eyebrow="Our Promise"
+        text="Every visit to Star Moon begins with listening. We take time to understand your skin, your hair and your plans, then use our skill and premium products to bring out"
+        highlight="the most confident you."
+        tags={['Caring', 'Hygienic', 'Skilled', 'Honest']}
+        className="bg-white"
+      />
 
       {/* Experience & Expertise */}
       <section className="section bg-gradient-to-b from-cream to-blush/30">

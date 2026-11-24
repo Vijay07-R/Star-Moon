@@ -1,6 +1,9 @@
 import { Award, BookOpen, Calendar, Check, Clock, GraduationCap, Users, Star } from 'lucide-react'
 import { ButtonLink } from '../components/ui/Button'
 import { siteInfo } from '../data/site'
+import { BlurInText } from '../components/story/Words'
+import PhotoStory from '../components/story/PhotoStory'
+import { photos } from '../data/photos'
 
 const courses = [
   {
@@ -78,7 +81,7 @@ export default function AcademyPage() {
               <GraduationCap className="h-5 w-5 text-beige" aria-hidden />
               <span className="text-xs font-bold tracking-[0.2em] text-white uppercase">Professional Training</span>
             </div>
-            <h1 className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl">Beauty Academy</h1>
+            <BlurInText as="h1" text="Beauty Academy" className="text-5xl font-bold text-white sm:text-6xl lg:text-7xl" />
             <p className="mt-6 text-xl text-white/90 leading-relaxed">
               Launch your beauty career with industry-recognized certification and expert training
             </p>
@@ -123,6 +126,26 @@ export default function AcademyPage() {
           </div>
         </div>
       </section>
+
+      {/* Scroll story: what students learn */}
+      <PhotoStory
+        src={photos.receptionLook}
+        alt="Soft reception glam created at Star Moon"
+        aspect={853 / 1280}
+        from={{ x: 0.5, y: 0.4, zoom: 1.05 }}
+        to={{ x: 0.49, y: 0.3, zoom: 2.2 }}
+        points={[
+          { x: 0.5, y: 0.285, label: 'Soft Glam' },
+          { x: 0.385, y: 0.235, label: 'Hair Flowers' },
+          { x: 0.5, y: 0.375, label: 'Necklace Set' },
+        ]}
+        side="right"
+        eyebrow="Learn the Craft"
+        title="Real Looks, Real Skills"
+        text="Train on the same makeup, hair and draping our artists create for brides and party clients every week."
+        title2="Build Your Career"
+        text2="Small batches, hands-on practice and guidance to start your own beauty journey."
+      />
 
       {/* Courses */}
       <section id="courses" className="section bg-gradient-to-b from-cream to-blush/30">

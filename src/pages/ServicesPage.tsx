@@ -5,6 +5,8 @@ import FilterTabs from '../components/ui/FilterTabs'
 import SectionHeading from '../components/ui/SectionHeading'
 import { serviceCategories, services } from '../data/services'
 import type { ServiceCategory } from '../types'
+import { BlurInText } from '../components/story/Words'
+import FillStatement from '../components/story/FillStatement'
 
 export default function ServicesPage() {
   const [params, setParams] = useSearchParams()
@@ -20,7 +22,7 @@ export default function ServicesPage() {
       <section className="section bg-cream">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center mb-8">
-            <h1 className="text-4xl font-semibold sm:text-5xl">Beauty Services</h1>
+            <BlurInText as="h1" text="Beauty Services" className="text-4xl font-semibold sm:text-5xl" />
             <a href="#price-list" className="mt-4 inline-block text-sm font-semibold text-burgundy underline underline-offset-4 hover:text-burgundy-dark">
               See full price list
             </a>
@@ -36,6 +38,13 @@ export default function ServicesPage() {
           <ServiceGrid services={visible} />
         </div>
       </section>
+      <FillStatement
+        eyebrow="Before Every Service"
+        text="We look at your skin and hair, talk through what you want, and suggest only what truly suits you, so every service feels"
+        highlight="made just for you."
+        tags={['Consultation', 'Premium Products', 'Hygienic', 'Honest Pricing']}
+        className="bg-blush/40"
+      />
       <PriceList />
     </>
   )

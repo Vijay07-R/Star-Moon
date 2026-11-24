@@ -6,6 +6,7 @@ import FilterTabs from '../components/ui/FilterTabs'
 import SectionHeading from '../components/ui/SectionHeading'
 import { packageCategories, packages } from '../data/packages'
 import type { PackageCategory } from '../types'
+import { BlurInText } from '../components/story/Words'
 
 export default function OffersPage() {
   const [active, setActive] = useState<PackageCategory | 'all'>('all')
@@ -16,7 +17,7 @@ export default function OffersPage() {
       <section className="section bg-cream">
         <div className="container-page">
           <div className="mx-auto max-w-3xl text-center mb-8">
-            <h1 className="text-4xl font-semibold sm:text-5xl">Offers &amp; Packages</h1>
+            <BlurInText as="h1" text="Offers & Packages" className="text-4xl font-semibold sm:text-5xl" />
           </div>
         </div>
       </section>

@@ -1,24 +1,18 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import type { CSSProperties } from 'react'
 import { ArrowDown, CalendarCheck, GraduationCap, HeartHandshake, Sparkles, Star } from 'lucide-react'
-import CtaBanner from '../components/sections/CtaBanner'
-import { ButtonLink } from '../components/ui/Button'
-import { photos } from '../data/photos'
+import { photos } from '../../data/photos'
+import { ButtonLink } from '../ui/Button'
+import { clamp, ease, HEADER_PX, mix, prefersReducedMotion, seg, useElementSize, usePinnedProgress } from './motion'
+import { BlurWords, FillWords } from './Words'
 
 /**
- * DESIGN PREVIEW (not linked in the menu): a scroll-driven story in three scenes.
+ * Home page hero: a scroll-driven story in three scenes.
  *  1. Portrait hero: headline, stats, and "focus" frames on the bride's look
  *  2. The photo slides left and zooms into her face; a panel opens with titles that blur in
  *  3. A statement whose words fill with colour as you scroll, with floating tags
  * The stage stays pinned while the page scrolls through a tall container.
  */
-
-// ---------- small animation helpers ----------
-const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v))
-/** 0→1 as p goes from a to b */
-const seg = (p: number, a: number, b: number) => clamp((p - a) / (b - a))
-const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
-const mix = (a: number, b: number, t: number) => a + (b - a) * t
 
 /** Photo is 728×1600; positions below are fractions of the full image. */
 const PHOTO_ASPECT = 728 / 1600
@@ -49,28 +43,6 @@ const tags = [
   { label: 'Bridal Ready', x: '84%', y: '58%', dot: 'bg-beige', dur: '8s', edge: false },
   { label: 'Happy', x: '64%', y: '86%', dot: 'bg-beige-dark', dur: '6.4s', edge: true },
 ]
-
-/** Words that fade and un-blur one after another as t goes 0→1. */
-function BlurWords({ text, t, className = '' }: { text: string; t: number; className?: string }) {
-  const words = text.split(' ')
-  const n = words.length
-  return (
-    <span className={className}>
-      {words.map((w, i) => {
-        const k = clamp(t * (n + 1) - i)
-        return (
-          <span
-            key={i}
-            className="inline-block whitespace-pre"
-            style={{ opacity: k, filter: `blur(${(1 - k) * 10}px)`, transform: `translateY(${(1 - k) * 12}px)` }}
-          >
-            {w + (i < n - 1 ? ' ' : '')}
-          </span>
-        )
-      })}
-    </span>
-  )
-}
 
 /** Square "focus" frame with corner brackets, and a label pulled out to one side on a thin line. */
 function FocusFrame({ label, delay, side, showLabel }: { label: string; delay: number; side: 'left' | 'right'; showLabel: boolean }) {
@@ -183,7 +155,7 @@ function Stage({ p, w, h }: { p: number; w: number; h: number }) {
                   <span className="anim-pulse-ring absolute inset-0 rounded-full bg-white" />
                   <span className="relative h-2.5 w-2.5 rounded-full bg-white shadow" />
                 </span>
-                <span className="text-[9px] font-semibold tracking-[0.2em] whitespace-nowrap text-white uppercase [text-shadow:0_1px_6px_rgb(0_0_0/0.6)] md:text-[10px]">
+                <span className="rounded-full bg-espresso/55 px-2 py-0.5 text-[9px] font-semibold tracking-[0.2em] whitespace-nowrap text-white uppercase backdrop-blur-sm md:text-[10px]">
                   {d.label}
                 </span>
               </div>
@@ -325,89 +297,32 @@ function Stage({ p, w, h }: { p: number; w: number; h: number }) {
   )
 }
 
-/** Words go from faint to full colour one by one as t goes 0→1. */
-function FillWords({ text, t, offset = 0, total, className = '' }: { text: string; t: number; offset?: number; total: number; className?: string }) {
-  const words = text.split(' ')
-  return (
-    <span className={className}>
-      {words.map((w, i) => {
-        const k = clamp(t * total - (offset + i))
-        return (
-          <span key={i} style={{ opacity: 0.16 + k * 0.84, transition: 'opacity 0.15s linear' }}>
-            {w}
-            {i < words.length - 1 ? ' ' : ''}
-          </span>
-        )
-      })}
-    </span>
-  )
-}
-
-const HEADER = 72 // sticky header height (px)
-
-export default function PreviewPage() {
+export default function HomeStory() {
   const trackRef = useRef<HTMLDivElement>(null)
   const stageRef = useRef<HTMLDivElement>(null)
-  const [p, setP] = useState(0)
-  const [size, setSize] = useState({ w: 1280, h: 720 })
-  const [reduce] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  const reduce = prefersReducedMotion()
+  const p = usePinnedProgress(trackRef, !reduce)
+  const { w, h } = useElementSize(stageRef)
+  const stageStyle = { height: `calc(100svh - ${HEADER_PX}px)` }
 
-  useEffect(() => {
-    const stage = stageRef.current
-    if (!stage) return
-    const ro = new ResizeObserver(([e]) => setSize({ w: e.contentRect.width, h: e.contentRect.height }))
-    ro.observe(stage)
-    return () => ro.disconnect()
-  }, [])
-
-  useEffect(() => {
-    if (reduce) return
-    let frame = 0
-    const update = () => {
-      const el = trackRef.current
-      if (!el) return
-      const r = el.getBoundingClientRect()
-      const total = el.offsetHeight - (window.innerHeight - HEADER)
-      setP(clamp((HEADER - r.top) / total))
-    }
-    const onScroll = () => {
-      cancelAnimationFrame(frame)
-      frame = requestAnimationFrame(update)
-    }
-    update()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll)
-    return () => {
-      cancelAnimationFrame(frame)
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onScroll)
-    }
-  }, [reduce])
-
-  const stageStyle = { height: `calc(100svh - ${HEADER}px)` }
-
-  // Reduced motion: show the three scenes as still frames, one after another.
+  // Reduced motion: the three scenes as still frames, one after another.
   if (reduce) {
     return (
       <div data-no-reveal>
         {[0.02, 0.58, 0.97].map((still) => (
           <div key={still} ref={still === 0.02 ? stageRef : undefined} style={stageStyle}>
-            <Stage p={still} w={size.w} h={size.h} />
+            <Stage p={still} w={w} h={h} />
           </div>
         ))}
-        <CtaBanner />
       </div>
     )
   }
 
   return (
-    <div data-no-reveal>
-      <div ref={trackRef} className="relative" style={{ height: '520vh' }}>
-        <div ref={stageRef} className="sticky" style={{ top: HEADER, ...stageStyle }}>
-          <Stage p={p} w={size.w} h={size.h} />
-        </div>
+    <div ref={trackRef} data-no-reveal className="relative" style={{ height: '480vh' }}>
+      <div ref={stageRef} className="sticky" style={{ top: HEADER_PX, ...stageStyle }}>
+        <Stage p={p} w={w} h={h} />
       </div>
-      <CtaBanner />
     </div>
   )
 }

@@ -10,8 +10,8 @@
   --color-cream: #fbf7f0;
   --color-espresso: #3b2226;
 
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 @layer base {
