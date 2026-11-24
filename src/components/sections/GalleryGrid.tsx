@@ -42,7 +42,7 @@ export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
             <SmartImage
               src={image.src}
               alt={image.title}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               style={image.position ? { objectPosition: image.position } : undefined}
             />
             <span className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-burgundy/70 p-3 text-center text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
