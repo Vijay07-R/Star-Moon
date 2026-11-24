@@ -2,7 +2,7 @@ import { Award, BookOpen, Calendar, Check, Clock, GraduationCap, Users, Star } f
 import { ButtonLink } from '../components/ui/Button'
 import { siteInfo } from '../data/site'
 import { BlurInText } from '../components/story/Words'
-import PhotoStory from '../components/story/PhotoStory'
+import ArchReveal from '../components/story/ArchReveal'
 import { photos } from '../data/photos'
 
 const courses = [
@@ -127,24 +127,20 @@ export default function AcademyPage() {
         </div>
       </section>
 
-      {/* Scroll story: what students learn */}
-      <PhotoStory
+      {/* Signature animation: the arched mirror opens onto a real look */}
+      <ArchReveal
         src={photos.receptionLook}
         alt="Soft reception glam created at Star Moon"
-        aspect={853 / 1280}
-        from={{ x: 0.5, y: 0.4, zoom: 1.05 }}
-        to={{ x: 0.49, y: 0.3, zoom: 2.2 }}
-        points={[
-          { x: 0.5, y: 0.285, label: 'Soft Glam' },
-          { x: 0.385, y: 0.235, label: 'Hair Flowers' },
-          { x: 0.5, y: 0.375, label: 'Necklace Set' },
-        ]}
-        side="right"
-        eyebrow="Learn the Craft"
-        title="Real Looks, Real Skills"
-        text="Train on the same makeup, hair and draping our artists create for brides and party clients every week."
-        title2="Build Your Career"
-        text2="Small batches, hands-on practice and guidance to start your own beauty journey."
+        position="50% 22%"
+        bigTitle="The Art of Beauty"
+        eyebrow="Star Moon Academy"
+        title="Learn the Craft"
+        text="Train on the same makeup, hair and draping looks our artists create for brides and party clients, with small batches and hands-on practice."
+        action={
+          <a href="#courses" className="inline-flex items-center gap-2 rounded-md bg-beige px-7 py-3 font-medium text-espresso transition-colors hover:bg-[#c9ab82]">
+            View Courses
+          </a>
+        }
       />
 
       {/* Courses */}

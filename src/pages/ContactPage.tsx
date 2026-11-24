@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import AppointmentForm from '../components/forms/AppointmentForm'
 import { InstagramIcon } from '../components/ui/SocialIcons'
 import { siteInfo } from '../data/site'
+import { CircleReveal, Flourish, PageTurn } from '../components/story/ContactMotion'
 import { BlurInText } from '../components/story/Words'
 
 const contactCards = [
@@ -40,18 +41,19 @@ export default function ContactPage() {
         <div className="container-page relative">
           <div className="max-w-3xl mx-auto text-center">
             <BlurInText as="h1" text="Contact Us" className="text-5xl font-bold text-white sm:text-6xl" />
-            <p className="mt-4 text-xl text-white/90">We'd love to hear from you</p>
+            <p className="anim-blur-in mt-4 text-xl text-white/90 [--delay:350ms]">We'd love to hear from you</p>
+            <Flourish className="mx-auto mt-6 h-8 w-64 text-beige" />
           </div>
         </div>
       </section>
 
-      {/* Contact Information Cards */}
-      <section className="section bg-gradient-to-b from-white to-cream">
+      {/* Contact Information Cards: each turns in like a page */}
+      <section data-no-reveal className="section bg-gradient-to-b from-white to-cream">
         <div className="container-page">
           <div className="grid gap-8 md:grid-cols-3">
-            {contactCards.map(({ icon: Icon, title, info, action, href }) => (
+            {contactCards.map(({ icon: Icon, title, info, action, href }, i) => (
+              <PageTurn key={title} index={i}>
               <div
-                key={title}
                 data-tilt
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-2xl hover:-translate-y-1"
               >
@@ -72,6 +74,7 @@ export default function ContactPage() {
                 </div>
                 <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-beige via-beige-light to-beige" />
               </div>
+              </PageTurn>
             ))}
           </div>
         </div>
@@ -86,7 +89,7 @@ export default function ContactPage() {
               <div className="h-1 w-16 bg-beige mt-2 rounded-full mx-auto mb-6" />
               <h2 className="text-4xl font-bold">Find Us On Map</h2>
             </div>
-            <div className="overflow-hidden rounded-3xl shadow-2xl border-4 border-beige/20">
+            <CircleReveal className="overflow-hidden rounded-3xl shadow-2xl border-4 border-beige/20">
               <iframe
                 title="Star Moon Beauty Salon & Studio location map"
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(siteInfo.mapQuery)}&z=15&output=embed`}
@@ -94,7 +97,7 @@ export default function ContactPage() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-            </div>
+            </CircleReveal>
             <div className="mt-6 text-center">
               <a
                 href={siteInfo.mapsUrl}

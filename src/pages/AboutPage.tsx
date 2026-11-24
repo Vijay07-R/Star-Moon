@@ -4,7 +4,6 @@ import SmartImage from '../components/ui/SmartImage'
 import { photos } from '../data/photos'
 import { commitments, stats } from '../data/team'
 import { BlurInText } from '../components/story/Words'
-import FillStatement from '../components/story/FillStatement'
 import PhotoStory from '../components/story/PhotoStory'
 
 const expertiseAreas = [
@@ -76,14 +75,6 @@ export default function AboutPage() {
         text="Fresh jasmine and roses, set strand by strand into a bridal jadai that lasts the whole ceremony."
         title2="Your Story, Styled"
         text2="Every bride is different, so every jadai, bun and braid is planned around you."
-      />
-
-      <FillStatement
-        eyebrow="Our Promise"
-        text="Every visit to Star Moon begins with listening. We take time to understand your skin, your hair and your plans, then use our skill and premium products to bring out"
-        highlight="the most confident you."
-        tags={['Caring', 'Hygienic', 'Skilled', 'Honest']}
-        className="bg-white"
       />
 
       {/* Experience & Expertise */}
